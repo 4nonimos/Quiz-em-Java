@@ -11,11 +11,8 @@ String[] questions= {
     "Pergunta 3"
 };
 
-public class Quiz {
+public class Quiz implements ActionListener{
 
-    public Quiz() implements ActionListener{
-
-    }
     public void proximaPergunta() {
 
     }
@@ -29,4 +26,4 @@ public class Quiz {
     public void results() {
 
     }
-}
+  }
