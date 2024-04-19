@@ -30,7 +30,7 @@ public class LoginTela extends javax.swing.JFrame {
         senhaPasswordField = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         entrarButton = new javax.swing.JButton();
-        CadastroButton = new javax.swing.JButton();
+        cadastroButton = new javax.swing.JButton();
         sairButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,7 +59,7 @@ public class LoginTela extends javax.swing.JFrame {
             }
         });
 
-        CadastroButton.setText("Cadastre-se");
+        cadastroButton.setText("Cadastre-se");
 
         sairButton.setText("sair");
 
@@ -78,7 +78,7 @@ public class LoginTela extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(entrarButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(CadastroButton))
+                                .addComponent(cadastroButton))
                             .addComponent(nickTextField)
                             .addComponent(senhaPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
@@ -98,7 +98,7 @@ public class LoginTela extends javax.swing.JFrame {
                 .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(entrarButton)
-                    .addComponent(CadastroButton))
+                    .addComponent(cadastroButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(sairButton)
                 .addContainerGap(53, Short.MAX_VALUE))
@@ -156,7 +156,7 @@ public class LoginTela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CadastroButton;
+    private javax.swing.JButton cadastroButton;
     private javax.swing.JButton entrarButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField nickTextField;
