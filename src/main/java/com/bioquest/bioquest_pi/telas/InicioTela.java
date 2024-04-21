@@ -48,6 +48,11 @@ public class InicioTela extends javax.swing.JFrame {
         configuracaoButton.setText("Configurações");
 
         rankingButton.setText("Ranking");
+        rankingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rankingButtonActionPerformed(evt);
+            }
+        });
 
         playFase1Button.setText("JOGAR");
         playFase1Button.addActionListener(new java.awt.event.ActionListener() {
@@ -158,6 +163,10 @@ public class InicioTela extends javax.swing.JFrame {
     private void playFase3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playFase3ButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_playFase3ButtonActionPerformed
+
+    private void rankingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rankingButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rankingButtonActionPerformed
 
     /**
      * @param args the command line arguments
