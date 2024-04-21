@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="266" max="-2" attributes="0"/>
+                          <Component id="emailTextField" min="-2" pref="177" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="criaSenhaPasswordField" min="-2" pref="177" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="nomeUsuarioTextField" alignment="1" min="-2" pref="177" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="voltarParaLoginButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="verSenhaToggleButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="216" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+              <Component id="emailTextField" min="-2" pref="70" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="criaSenhaPasswordField" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="verSenhaToggleButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Component id="nomeUsuarioTextField" min="-2" pref="70" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <Component id="voltarParaLoginButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="107" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JTextField" name="emailTextField">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder justification="2" title="Digite seu E-mail">
+              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                <EmptyBorder/>
+              </Border>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailTextFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="criaSenhaPasswordField">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jPasswordField1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="criaSenhaPasswordFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="verSenhaToggleButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ver senha"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="nomeUsuarioTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nome de usu&#xe1;rio"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="voltarParaLoginButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Voltar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="voltarParaLoginButtonActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
