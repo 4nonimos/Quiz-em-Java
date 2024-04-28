@@ -61,6 +61,11 @@ public class LoginTela extends javax.swing.JFrame {
         });
 
         cadastroButton.setText("Cadastre-se");
+        cadastroButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadastroButtonActionPerformed(evt);
+            }
+        });
 
         sairButton.setText("sair");
 
@@ -120,6 +125,13 @@ public class LoginTela extends javax.swing.JFrame {
     private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_entrarButtonActionPerformed
+
+    private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
+        // TODO add your handling code here:
+        CadastroTela cadastro = new CadastroTela();
+        this.dispose();
+        cadastro.setVisible(true);
+    }//GEN-LAST:event_cadastroButtonActionPerformed
 
     /**
      * @param args the command line arguments

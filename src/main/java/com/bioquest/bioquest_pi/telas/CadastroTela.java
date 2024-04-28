@@ -31,6 +31,9 @@ public class CadastroTela extends javax.swing.JFrame {
         verSenhaToggleButton = new javax.swing.JToggleButton();
         nomeUsuarioTextField = new javax.swing.JTextField();
         voltarParaLoginButton = new javax.swing.JButton();
+        EnviarParaBancoButton = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,6 +52,11 @@ public class CadastroTela extends javax.swing.JFrame {
         });
 
         verSenhaToggleButton.setText("ver senha");
+        verSenhaToggleButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verSenhaToggleButtonActionPerformed(evt);
+            }
+        });
 
         nomeUsuarioTextField.setText("Nome de usuário");
 
@@ -59,44 +67,69 @@ public class CadastroTela extends javax.swing.JFrame {
             }
         });
 
+        EnviarParaBancoButton.setText("Enviar");
+        EnviarParaBancoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnviarParaBancoButtonActionPerformed(evt);
+            }
+        });
+
+        jTextField1.setText("Cadastro!");
+
+        jTextField2.setText("Usaremos seus dados para poder salvar/gravar seu progresso!");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(266, 266, 266)
-                            .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(criaSenhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(nomeUsuarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(266, 266, 266)
+                                    .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(criaSenhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(voltarParaLoginButton)
-                                .addGap(55, 55, 55)))))
-                .addGap(18, 18, 18)
-                .addComponent(verSenhaToggleButton)
-                .addContainerGap(216, Short.MAX_VALUE))
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(EnviarParaBancoButton)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(voltarParaLoginButton))
+                                    .addComponent(nomeUsuarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(verSenhaToggleButton)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(314, 314, 314)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(121, 121, 121)
+                .addGap(37, 37, 37)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62)
                 .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(criaSenhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(verSenhaToggleButton))
                 .addGap(26, 26, 26)
-                .addComponent(nomeUsuarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(voltarParaLoginButton)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nomeUsuarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(voltarParaLoginButton)
+                    .addComponent(EnviarParaBancoButton))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
         pack();
@@ -108,11 +141,27 @@ public class CadastroTela extends javax.swing.JFrame {
 
     private void criaSenhaPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_criaSenhaPasswordFieldActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_criaSenhaPasswordFieldActionPerformed
 
     private void voltarParaLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarParaLoginButtonActionPerformed
         // TODO add your handling code here:
+        LoginTela loginTela = new LoginTela();
+        this.dispose();
+        loginTela.setVisible(true);
     }//GEN-LAST:event_voltarParaLoginButtonActionPerformed
+
+    private void EnviarParaBancoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarParaBancoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EnviarParaBancoButtonActionPerformed
+
+    private void verSenhaToggleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verSenhaToggleButtonActionPerformed
+        // TODO add your handling code here:
+        boolean visivel = criaSenhaPasswordField.getEchoChar() == 0;
+
+        // Alterna a visibilidade da senha
+        criaSenhaPasswordField.setEchoChar(visivel ? '\u25cf' : 0);
+    }//GEN-LAST:event_verSenhaToggleButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,8 +199,11 @@ public class CadastroTela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton EnviarParaBancoButton;
     private javax.swing.JPasswordField criaSenhaPasswordField;
     private javax.swing.JTextField emailTextField;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField nomeUsuarioTextField;
     private javax.swing.JToggleButton verSenhaToggleButton;
     private javax.swing.JButton voltarParaLoginButton;
