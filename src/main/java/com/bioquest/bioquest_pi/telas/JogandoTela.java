@@ -26,7 +26,6 @@ public class JogandoTela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        perguntaTextField = new javax.swing.JTextField();
         respostadButton = new javax.swing.JButton();
         respostaaButton = new javax.swing.JButton();
         respostacButton = new javax.swing.JButton();
@@ -34,15 +33,9 @@ public class JogandoTela extends javax.swing.JFrame {
         anteriorButton = new javax.swing.JButton();
         proximaButton = new javax.swing.JButton();
         finalizarButton = new javax.swing.JButton();
+        perguntaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        perguntaTextField.setText("<PERGUNTA>");
-        perguntaTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                perguntaTextFieldActionPerformed(evt);
-            }
-        });
 
         respostadButton.setText("Resposta D");
 
@@ -57,6 +50,8 @@ public class JogandoTela extends javax.swing.JFrame {
         proximaButton.setText("Próxima");
 
         finalizarButton.setText("Finalizar");
+
+        perguntaLabel.setText("PERGUNTA AQUI!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,23 +75,22 @@ public class JogandoTela extends javax.swing.JFrame {
                                 .addGap(40, 40, 40)
                                 .addComponent(respostadButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(respostaaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(40, 40, 40)
-                                        .addComponent(respostabButton, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGap(36, 36, 36)
-                                        .addComponent(perguntaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(respostaaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(40, 40, 40)
+                                .addComponent(respostabButton, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(35, 35, 35))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(196, 196, 196)
+                .addComponent(perguntaLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(perguntaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(36, 36, 36)
+                .addComponent(perguntaLabel)
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(respostaaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -116,10 +110,6 @@ public class JogandoTela extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void perguntaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perguntaTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_perguntaTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,7 +149,7 @@ public class JogandoTela extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton anteriorButton;
     private javax.swing.JButton finalizarButton;
-    private javax.swing.JTextField perguntaTextField;
+    private javax.swing.JLabel perguntaLabel;
     private javax.swing.JButton proximaButton;
     private javax.swing.JButton respostaaButton;
     private javax.swing.JButton respostabButton;
