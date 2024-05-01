@@ -26,46 +26,45 @@ public class TelaInicialAluno extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        SairParaLogin = new javax.swing.JButton();
-        VerRelatorio = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        sairButton = new javax.swing.JButton();
+        relatiorioButton = new javax.swing.JButton();
+        configButton = new javax.swing.JButton();
+        entrarQuizButton = new javax.swing.JButton();
+        play1Button = new javax.swing.JButton();
+        play2Button = new javax.swing.JButton();
+        play3Button = new javax.swing.JButton();
+        play4Button = new javax.swing.JButton();
+        bioquestLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jTextField1.setText("BioQuest");
-
-        SairParaLogin.setText("sair");
-        SairParaLogin.addActionListener(new java.awt.event.ActionListener() {
+        sairButton.setText("sair");
+        sairButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SairParaLoginActionPerformed(evt);
+                sairButtonActionPerformed(evt);
             }
         });
 
-        VerRelatorio.setText("Relatório");
+        relatiorioButton.setText("Relatório");
 
-        jButton1.setText("Configurações");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        configButton.setText("Configurações");
+        configButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                configButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Entrar Quiz");
+        entrarQuizButton.setText("Entrar Quiz");
 
-        jButton3.setText("jogar1");
+        play1Button.setText("jogar1");
 
-        jButton4.setText("jogar2");
+        play2Button.setText("jogar2");
 
-        jButton5.setText("jogar3");
+        play3Button.setText("jogar3");
 
-        jButton6.setText("jogar4");
+        play4Button.setText("jogar4");
+
+        bioquestLabel.setText("BIOQUEST FT AQUI");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -75,71 +74,71 @@ public class TelaInicialAluno extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(SairParaLogin)
+                        .addComponent(sairButton)
                         .addGap(86, 86, 86))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(entrarQuizButton)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(configButton)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(VerRelatorio)
+                        .addComponent(relatiorioButton)
                         .addContainerGap())))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(jButton3)
+                        .addComponent(play1Button)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4)
+                        .addComponent(play2Button)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton5)
+                        .addComponent(play3Button)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton6)))
+                        .addComponent(play4Button))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(151, 151, 151)
+                        .addComponent(bioquestLabel)))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(SairParaLogin)
+                .addGap(32, 32, 32)
+                .addComponent(bioquestLabel)
+                .addGap(35, 35, 35)
+                .addComponent(sairButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(VerRelatorio)
+                .addComponent(relatiorioButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(configButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addComponent(entrarQuizButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
+                    .addComponent(play1Button)
+                    .addComponent(play2Button)
+                    .addComponent(play3Button)
+                    .addComponent(play4Button))
                 .addGap(22, 22, 22))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SairParaLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairParaLoginActionPerformed
+    private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
         // TODO add your handling code here:
         LoginTela loginTela = new LoginTela();
         this.dispose();
         loginTela.setVisible(true);
-    }//GEN-LAST:event_SairParaLoginActionPerformed
+    }//GEN-LAST:event_sairButtonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void configButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configButtonActionPerformed
         // TODO add your handling code here:
-        Configuracao config = new Configuracao();
+        ConfigTela config = new ConfigTela();
         this.dispose();
         config.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_configButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,14 +176,14 @@ public class TelaInicialAluno extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton SairParaLogin;
-    private javax.swing.JButton VerRelatorio;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel bioquestLabel;
+    private javax.swing.JButton configButton;
+    private javax.swing.JButton entrarQuizButton;
+    private javax.swing.JButton play1Button;
+    private javax.swing.JButton play2Button;
+    private javax.swing.JButton play3Button;
+    private javax.swing.JButton play4Button;
+    private javax.swing.JButton relatiorioButton;
+    private javax.swing.JButton sairButton;
     // End of variables declaration//GEN-END:variables
 }
