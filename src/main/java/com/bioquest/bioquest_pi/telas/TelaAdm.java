@@ -26,51 +26,56 @@ public class TelaAdm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        SairParaLogin = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        sairButton = new javax.swing.JButton();
+        entrarQuizButton = new javax.swing.JButton();
+        admButton = new javax.swing.JButton();
+        gerenciarButton = new javax.swing.JButton();
+        configButton = new javax.swing.JButton();
+        rankingButton = new javax.swing.JButton();
+        play1Button = new javax.swing.JButton();
+        play2Button = new javax.swing.JButton();
+        play3Button = new javax.swing.JButton();
+        play4Button = new javax.swing.JButton();
+        bioquestLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField1.setText("BioQuest");
-
-        SairParaLogin.setText("Sair");
-        SairParaLogin.addActionListener(new java.awt.event.ActionListener() {
+        sairButton.setText("Sair");
+        sairButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SairParaLoginActionPerformed(evt);
+                sairButtonActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Entrar Quiz");
-
-        jButton2.setText("Painel ADM");
-
-        jButton3.setText("Gerenciar Quiz");
-
-        jButton4.setText("Configurações");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        entrarQuizButton.setText("Entrar Quiz");
+        entrarQuizButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                entrarQuizButtonActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Ver Ranking");
+        admButton.setText("Painel ADM");
 
-        jButton6.setText("jogar 1");
+        gerenciarButton.setText("Gerenciar Quiz");
 
-        jButton7.setText("jogar 2");
+        configButton.setText("Configurações");
+        configButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                configButtonActionPerformed(evt);
+            }
+        });
 
-        jButton8.setText("jogar 3");
+        rankingButton.setText("Ver Ranking");
 
-        jButton9.setText("jogar 4");
+        play1Button.setText("jogar 1");
+
+        play2Button.setText("jogar 2");
+
+        play3Button.setText("jogar 3");
+
+        play4Button.setText("jogar 4");
+
+        bioquestLabel.setText("BIOQUEST FOTO AQUI");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,72 +87,75 @@ public class TelaAdm extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(SairParaLogin)
+                                .addComponent(sairButton)
                                 .addGap(104, 104, 104))
-                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addComponent(admButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(gerenciarButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(configButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(entrarQuizButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(rankingButton, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(152, 152, 152)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(jButton6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton9)))
+                        .addGap(30, 30, 30)
+                        .addComponent(play1Button)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(play2Button)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(play3Button)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(play4Button)
                         .addGap(0, 58, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(163, 163, 163)
+                .addComponent(bioquestLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bioquestLabel)
                 .addGap(29, 29, 29)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(SairParaLogin)
+                .addComponent(sairButton)
                 .addGap(2, 2, 2)
-                .addComponent(jButton1)
+                .addComponent(entrarQuizButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(admButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(gerenciarButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
+                .addComponent(configButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5)
+                .addComponent(rankingButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6)
-                    .addComponent(jButton7)
-                    .addComponent(jButton8)
-                    .addComponent(jButton9))
+                    .addComponent(play1Button)
+                    .addComponent(play2Button)
+                    .addComponent(play3Button)
+                    .addComponent(play4Button))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SairParaLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairParaLoginActionPerformed
+    private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
         // TODO add your handling code here:
         LoginTela loginTela = new LoginTela();
         this.dispose();
         loginTela.setVisible(true);
-    }//GEN-LAST:event_SairParaLoginActionPerformed
+    }//GEN-LAST:event_sairButtonActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void configButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configButtonActionPerformed
         // TODO add your handling code here:
-        Configuracao config = new Configuracao();
+        ConfigTela config = new ConfigTela();
         this.dispose();
         config.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_configButtonActionPerformed
+
+    private void entrarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarQuizButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_entrarQuizButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,16 +193,16 @@ public class TelaAdm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton SairParaLogin;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton admButton;
+    private javax.swing.JLabel bioquestLabel;
+    private javax.swing.JButton configButton;
+    private javax.swing.JButton entrarQuizButton;
+    private javax.swing.JButton gerenciarButton;
+    private javax.swing.JButton play1Button;
+    private javax.swing.JButton play2Button;
+    private javax.swing.JButton play3Button;
+    private javax.swing.JButton play4Button;
+    private javax.swing.JButton rankingButton;
+    private javax.swing.JButton sairButton;
     // End of variables declaration//GEN-END:variables
 }
