@@ -135,7 +135,7 @@ public class TelaInicialAluno extends javax.swing.JFrame {
 
     private void configButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configButtonActionPerformed
         // TODO add your handling code here:
-        ConfigTela config = new ConfigTela();
+        Configuracao config = new Configuracao();
         this.dispose();
         config.setVisible(true);
     }//GEN-LAST:event_configButtonActionPerformed

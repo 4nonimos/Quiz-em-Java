@@ -4,6 +4,9 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import com.bioquest.bioquest_pi.bd.UsuarioCAD;
+import com.bioquest.bioquest_pi.modelo.Usuario;
+
 /**
  *
  * @author Thamires
@@ -15,6 +18,7 @@ public class CadastroTela extends javax.swing.JFrame {
      */
     public CadastroTela() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -60,6 +64,11 @@ public class CadastroTela extends javax.swing.JFrame {
         });
 
         nomeUsuarioTextField.setText("Nome de usuário");
+        nomeUsuarioTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeUsuarioTextFieldActionPerformed(evt);
+            }
+        });
 
         voltarParaLoginButton.setText("Voltar");
         voltarParaLoginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -154,11 +163,11 @@ public class CadastroTela extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void emailTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTextFieldActionPerformed
-        // TODO add your handling code here:
+        var email =  emailTextField.getText();
     }//GEN-LAST:event_emailTextFieldActionPerformed
 
     private void criaSenhaPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_criaSenhaPasswordFieldActionPerformed
-        // TODO add your handling code here:
+        var senha = new String(criaSenhaPasswordField.getPassword());
         
     }//GEN-LAST:event_criaSenhaPasswordFieldActionPerformed
 
@@ -170,7 +179,16 @@ public class CadastroTela extends javax.swing.JFrame {
     }//GEN-LAST:event_voltarParaLoginButtonActionPerformed
 
     private void EnviarParaBancoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarParaBancoButtonActionPerformed
-        // TODO add your handling code here:
+        Usuario u = new Usuario();
+        u.setEmail(emailTextField.getText());
+        u.setSenha(new String(criaSenhaPasswordField.getPassword()));
+        u.setIdade(idadeTextField.getText());
+        u.setNome(nomeUsuarioTextField.getText());
+        UsuarioCAD cad = new UsuarioCAD();
+        cad.inserir(u);
+        LoginTela loginTela = new LoginTela();
+        this.dispose();
+        loginTela.setVisible(true);
     }//GEN-LAST:event_EnviarParaBancoButtonActionPerformed
 
     private void verSenhaToggleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verSenhaToggleButtonActionPerformed
@@ -182,8 +200,12 @@ public class CadastroTela extends javax.swing.JFrame {
     }//GEN-LAST:event_verSenhaToggleButtonActionPerformed
 
     private void idadeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idadeTextFieldActionPerformed
-        // TODO add your handling code here:
+        var idade = idadeTextField.getText();
     }//GEN-LAST:event_idadeTextFieldActionPerformed
+
+    private void nomeUsuarioTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeUsuarioTextFieldActionPerformed
+        var nome = nomeUsuarioTextField.getText();
+    }//GEN-LAST:event_nomeUsuarioTextFieldActionPerformed
 
     /**
      * @param args the command line arguments

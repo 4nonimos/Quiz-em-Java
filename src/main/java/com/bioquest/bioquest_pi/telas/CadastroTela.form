@@ -142,6 +142,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Nome de usu&#xe1;rio"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeUsuarioTextFieldActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="voltarParaLoginButton">
       <Properties>

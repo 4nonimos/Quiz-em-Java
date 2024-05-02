@@ -4,6 +4,10 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import com.bioquest.bioquest_pi.bd.UsuarioDAO;
+import com.bioquest.bioquest_pi.modelo.Usuario;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Thamires
@@ -15,6 +19,7 @@ public class LoginTela extends javax.swing.JFrame {
      */
     public LoginTela() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -35,7 +40,7 @@ public class LoginTela extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        nickTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite seu Nome de Usuário", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+        nickTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite seu Nome de Usuário/Email", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
         nickTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         nickTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +73,11 @@ public class LoginTela extends javax.swing.JFrame {
         });
 
         sairButton.setText("sair");
+        sairButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,7 +98,7 @@ public class LoginTela extends javax.swing.JFrame {
                             .addComponent(nickTextField)
                             .addComponent(senhaPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(379, 379, 379)
+                        .addGap(365, 365, 365)
                         .addComponent(sairButton)))
                 .addContainerGap(293, Short.MAX_VALUE))
         );
@@ -123,7 +133,29 @@ public class LoginTela extends javax.swing.JFrame {
     }//GEN-LAST:event_senhaPasswordFieldActionPerformed
 
     private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarButtonActionPerformed
-        // TODO add your handling code here:
+        try{
+            //1. Pegar o login digitado pelo usuário
+            var email = nickTextField.getText();
+            //2. Pegar a senha digitada pelo usuário
+            var senha = new String(senhaPasswordField.getPassword());
+            //3. Verificar se ambos são iguais a admin
+            //string pool
+            Usuario u = new Usuario();
+            u.setEmail(email);
+            u.setSenha(senha);
+            UsuarioDAO dao = new UsuarioDAO();
+            if(dao.existe(u)){
+                JOptionPane.showMessageDialog(null, "Bem vindo");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Par usuário/senha inválido");
+            }
+        
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo deu errado, tente novamente mais tarde");
+        }
     }//GEN-LAST:event_entrarButtonActionPerformed
 
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
@@ -132,6 +164,10 @@ public class LoginTela extends javax.swing.JFrame {
         this.dispose();
         cadastro.setVisible(true);
     }//GEN-LAST:event_cadastroButtonActionPerformed
+
+    private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_sairButtonActionPerformed
 
     /**
      * @param args the command line arguments
