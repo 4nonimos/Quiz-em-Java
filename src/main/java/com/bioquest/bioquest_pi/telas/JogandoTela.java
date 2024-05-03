@@ -4,6 +4,13 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author mmgd0
@@ -48,8 +55,18 @@ public class JogandoTela extends javax.swing.JFrame {
         anteriorButton.setText("Anterior");
 
         proximaButton.setText("Próxima");
+        proximaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                proximaButtonActionPerformed(evt);
+            }
+        });
 
         finalizarButton.setText("Finalizar");
+        finalizarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                finalizarButtonActionPerformed(evt);
+            }
+        });
 
         perguntaLabel.setText("PERGUNTA AQUI!");
 
@@ -110,6 +127,15 @@ public class JogandoTela extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void finalizarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_finalizarButtonActionPerformed
+
+    private void proximaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proximaButtonActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_proximaButtonActionPerformed
 
     /**
      * @param args the command line arguments

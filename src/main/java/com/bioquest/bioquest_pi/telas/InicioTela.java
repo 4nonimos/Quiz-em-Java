@@ -46,6 +46,11 @@ public class InicioTela extends javax.swing.JFrame {
         pontosLabel.setText("PONTOS AQUI");
 
         configuracaoButton.setText("Configurações");
+        configuracaoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                configuracaoButtonActionPerformed(evt);
+            }
+        });
 
         rankingButton.setText("Ranking");
         rankingButton.addActionListener(new java.awt.event.ActionListener() {
@@ -167,6 +172,10 @@ public class InicioTela extends javax.swing.JFrame {
     private void rankingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rankingButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rankingButtonActionPerformed
+
+    private void configuracaoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configuracaoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_configuracaoButtonActionPerformed
 
     /**
      * @param args the command line arguments
