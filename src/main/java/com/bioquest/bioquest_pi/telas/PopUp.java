@@ -78,7 +78,7 @@ public class PopUp extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        // Close the current screen
+        // Close the current screen 
         LoginTela loginTela = new LoginTela();
         this.dispose();
         loginTela.setVisible(true);
