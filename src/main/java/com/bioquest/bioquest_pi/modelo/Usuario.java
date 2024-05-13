@@ -14,7 +14,7 @@ public class Usuario {
     private String senha;
     private String idade;
     private String nome;
-    private int tipo; 
+    private String cargo; 
     
     //getter
     public int getCodigo(){
@@ -41,12 +41,12 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public int getTipo() {
-        return tipo;
+    public String getCargo() {
+        return cargo;
     }
 
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
     public String getIdade() {

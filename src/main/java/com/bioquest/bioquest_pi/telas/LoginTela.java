@@ -138,24 +138,37 @@ public class LoginTela extends javax.swing.JFrame {
             var email = nickTextField.getText();
             //2. Pegar a senha digitada pelo usuário
             var senha = new String(senhaPasswordField.getPassword());
-            //3. Verificar se ambos são iguais a admin
+            //3. Verificar se ambos são iguais a admin 
             //string pool
             Usuario u = new Usuario();
+            //var cargo = u.getCargo();
             u.setEmail(email);
             u.setSenha(senha);
-            UsuarioDAO dao = new UsuarioDAO();
+            //u.setCargo(cargo);
+            UsuarioDAO dao = new UsuarioDAO();           
             if(dao.existe(u)){
-                JOptionPane.showMessageDialog(null, "Bem vindo");
-            }
+                String cargo = dao.recebeCargo(u);
+                    switch(cargo){
+                        case "ALUNO":
+                            TelaInicialAluno telaAluno = new TelaInicialAluno();
+                            this.dispose();
+                            telaAluno.setVisible(true);
+                        case "PROFESSOR":
+                            TelaProfessor telaProf = new TelaProfessor();
+                            this.dispose();
+                            telaProf.setVisible(true);
+                        }
+                    }
+                //JOptionPane.showMessageDialog(null, "Bem vindo");
+            
             else{
                 JOptionPane.showMessageDialog(null, "Par usuário/senha inválido");
             }
-        
-        }
+        }        
         catch(Exception e){
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Algo deu errado, tente novamente mais tarde");
-        }
+        }        
     }//GEN-LAST:event_entrarButtonActionPerformed
 
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed

@@ -36,4 +36,21 @@ public class UsuarioDAO {
         //8. responser se achou ou não
         return achou;
     }
+    public String recebeCargo(Usuario u) throws Exception{
+        var sql = "SELECT cargo FROM cadastro_db WHERE email = ?";
+        Connection conexao = new ConnectionFactory().obterConexao();
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ps.setString(1, u.getEmail());
+        ResultSet rs = ps.executeQuery();
+        String cargo = null;        
+        if (rs.next()){
+            cargo = rs.getString("cargo");
+        }              
+        rs.close();
+        ps.close();
+        conexao.close();
+        return cargo;
+        
+    }
+    
 }
