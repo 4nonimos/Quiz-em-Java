@@ -37,6 +37,7 @@ public class LoginTela extends javax.swing.JFrame {
         entrarButton = new javax.swing.JButton();
         cadastroButton = new javax.swing.JButton();
         sairButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,6 +80,8 @@ public class LoginTela extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Entrar como convidado");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -98,14 +101,19 @@ public class LoginTela extends javax.swing.JFrame {
                             .addComponent(nickTextField)
                             .addComponent(senhaPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(365, 365, 365)
-                        .addComponent(sairButton)))
+                        .addContainerGap()
+                        .addComponent(sairButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(316, 316, 316)
+                        .addComponent(jButton1)))
                 .addContainerGap(293, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
+                .addContainerGap()
+                .addComponent(sairButton)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel1)
                 .addGap(184, 184, 184)
                 .addComponent(nickTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -115,9 +123,9 @@ public class LoginTela extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(entrarButton)
                     .addComponent(cadastroButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(sairButton)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         pack();
@@ -220,6 +228,7 @@ public class LoginTela extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cadastroButton;
     private javax.swing.JButton entrarButton;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField nickTextField;
     private javax.swing.JButton sairButton;
