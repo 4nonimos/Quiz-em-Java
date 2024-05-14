@@ -6,7 +6,7 @@ package com.bioquest.bioquest_pi.telas;
 
 /**
  *
- * @author Matheus
+ * @author Matheus aa 
  */
 public class TelaAdm extends javax.swing.JFrame {
 
