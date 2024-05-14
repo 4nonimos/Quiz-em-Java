@@ -6,7 +6,7 @@ package com.bioquest.bioquest_pi.telas;
 
 /**
  *
- * @author Thamires
+ * @author Thamires aa
  */
 public class CriarQuizTela extends javax.swing.JFrame {
 
