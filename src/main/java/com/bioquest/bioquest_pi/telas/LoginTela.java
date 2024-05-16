@@ -38,10 +38,14 @@ public class LoginTela extends javax.swing.JFrame {
         cadastroButton = new javax.swing.JButton();
         sairButton = new javax.swing.JButton();
         convidadoButton = new javax.swing.JButton();
+        loginLabel = new javax.swing.JLabel();
+        senhaLabel = new javax.swing.JLabel();
+        facaloginLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        emailTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite seu Nome de Usuário/Email", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+        emailTextField.setBackground(new java.awt.Color(24, 26, 31));
+        emailTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite seu RA ou E-mail", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft JhengHei UI", 1, 14), new java.awt.Color(62, 67, 82))); // NOI18N
         emailTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         emailTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,7 +53,8 @@ public class LoginTela extends javax.swing.JFrame {
             }
         });
 
-        senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite sua senha", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+        senhaPasswordField.setBackground(new java.awt.Color(24, 26, 31));
+        senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite sua senha", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft JhengHei UI", 1, 14), new java.awt.Color(62, 67, 82))); // NOI18N
         senhaPasswordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaPasswordFieldActionPerformed(evt);
@@ -59,27 +64,39 @@ public class LoginTela extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel1.setText("BioQuest");
 
-        entrarButton.setText("Entrar");
+        entrarButton.setBackground(new java.awt.Color(255, 223, 53));
+        entrarButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
+        entrarButton.setForeground(new java.awt.Color(255, 255, 255));
+        entrarButton.setText("Entrar na Conta");
         entrarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 entrarButtonActionPerformed(evt);
             }
         });
 
-        cadastroButton.setText("Cadastre-se");
+        cadastroButton.setBackground(new java.awt.Color(115, 56, 240));
+        cadastroButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
+        cadastroButton.setForeground(new java.awt.Color(255, 255, 255));
+        cadastroButton.setText("Cadastrar");
         cadastroButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastroButtonActionPerformed(evt);
             }
         });
 
-        sairButton.setText("sair");
+        sairButton.setBackground(new java.awt.Color(204, 0, 0));
+        sairButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
+        sairButton.setForeground(new java.awt.Color(255, 255, 255));
+        sairButton.setText("Sair");
         sairButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sairButtonActionPerformed(evt);
             }
         });
 
+        convidadoButton.setBackground(new java.awt.Color(131, 177, 0));
+        convidadoButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
+        convidadoButton.setForeground(new java.awt.Color(255, 255, 255));
         convidadoButton.setText("Entrar como convidado");
         convidadoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,51 +104,75 @@ public class LoginTela extends javax.swing.JFrame {
             }
         });
 
+        loginLabel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        loginLabel.setText("Login");
+
+        senhaLabel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        senhaLabel.setText("Senha");
+
+        facaloginLabel.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
+        facaloginLabel.setText("Faça seu Login");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(318, 318, 318)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(257, 257, 257)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(entrarButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cadastroButton))
-                            .addComponent(emailTextField)
-                            .addComponent(senhaPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(sairButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(316, 316, 316)
-                        .addComponent(convidadoButton)))
-                .addContainerGap(293, Short.MAX_VALUE))
+                .addGap(224, 224, 224)
+                .addComponent(sairButton))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(542, 542, 542)
+                .addComponent(jLabel1))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(309, 309, 309)
+                .addComponent(facaloginLabel))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(373, 373, 373)
+                .addComponent(loginLabel))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(372, 372, 372)
+                .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(371, 371, 371)
+                .addComponent(senhaLabel))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(372, 372, 372)
+                .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(442, 442, 442)
+                .addComponent(cadastroButton, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(101, 101, 101)
+                .addComponent(entrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(550, 550, 550)
+                .addComponent(convidadoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addComponent(sairButton)
                 .addGap(24, 24, 24)
                 .addComponent(jLabel1)
-                .addGap(184, 184, 184)
-                .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(facaloginLabel)
                 .addGap(18, 18, 18)
-                .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(entrarButton)
-                    .addComponent(cadastroButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(convidadoButton)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addComponent(loginLabel)
+                .addGap(6, 6, 6)
+                .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(senhaLabel)
+                .addGap(6, 6, 6)
+                .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cadastroButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(entrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(convidadoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        emailTextField.getAccessibleContext().setAccessibleName("Digite seu RA ou E-mail");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -243,8 +284,11 @@ public class LoginTela extends javax.swing.JFrame {
     private javax.swing.JButton convidadoButton;
     private javax.swing.JTextField emailTextField;
     private javax.swing.JButton entrarButton;
+    private javax.swing.JLabel facaloginLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel loginLabel;
     private javax.swing.JButton sairButton;
+    private javax.swing.JLabel senhaLabel;
     private javax.swing.JPasswordField senhaPasswordField;
     // End of variables declaration//GEN-END:variables
 }
