@@ -31,21 +31,21 @@ public class LoginTela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        nickTextField = new javax.swing.JTextField();
+        emailTextField = new javax.swing.JTextField();
         senhaPasswordField = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         entrarButton = new javax.swing.JButton();
         cadastroButton = new javax.swing.JButton();
         sairButton = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        convidadoButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        nickTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite seu Nome de Usuário/Email", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
-        nickTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        nickTextField.addActionListener(new java.awt.event.ActionListener() {
+        emailTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite seu Nome de Usuário/Email", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+        emailTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        emailTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nickTextFieldActionPerformed(evt);
+                emailTextFieldActionPerformed(evt);
             }
         });
 
@@ -80,7 +80,12 @@ public class LoginTela extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Entrar como convidado");
+        convidadoButton.setText("Entrar como convidado");
+        convidadoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convidadoButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,14 +103,14 @@ public class LoginTela extends javax.swing.JFrame {
                                 .addComponent(entrarButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(cadastroButton))
-                            .addComponent(nickTextField)
+                            .addComponent(emailTextField)
                             .addComponent(senhaPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(sairButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(316, 316, 316)
-                        .addComponent(jButton1)))
+                        .addComponent(convidadoButton)))
                 .addContainerGap(293, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -116,7 +121,7 @@ public class LoginTela extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addComponent(jLabel1)
                 .addGap(184, 184, 184)
-                .addComponent(nickTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(56, 56, 56)
@@ -124,26 +129,26 @@ public class LoginTela extends javax.swing.JFrame {
                     .addComponent(entrarButton)
                     .addComponent(cadastroButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(convidadoButton)
                 .addContainerGap(59, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nickTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nickTextFieldActionPerformed
-        // TODO add your handling code here:
+    private void emailTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTextFieldActionPerformed
+        //var email = emailTextField.getText();
         
-    }//GEN-LAST:event_nickTextFieldActionPerformed
+    }//GEN-LAST:event_emailTextFieldActionPerformed
 
     private void senhaPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaPasswordFieldActionPerformed
-        // TODO add your handling code here:
+        //var senha = new String(senhaPasswordField.getPassword());
     }//GEN-LAST:event_senhaPasswordFieldActionPerformed
 
     private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarButtonActionPerformed
         try{
             //1. Pegar o login digitado pelo usuário
-            var email = nickTextField.getText();
+            var email = emailTextField.getText();
             //2. Pegar a senha digitada pelo usuário
             var senha = new String(senhaPasswordField.getPassword());
             //3. Verificar se ambos são iguais a admin 
@@ -157,14 +162,16 @@ public class LoginTela extends javax.swing.JFrame {
             if(dao.existe(u)){
                 String cargo = dao.recebeCargo(u);
                     switch(cargo){
-                        case "ALUNO":
+                        case "ALUNO" ->{
                             TelaInicialAluno telaAluno = new TelaInicialAluno();
                             this.dispose();
                             telaAluno.setVisible(true);
-                        case "PROFESSOR":
+                        }
+                        case "PROFESSOR" ->{
                             TelaProfessor telaProf = new TelaProfessor();
                             this.dispose();
                             telaProf.setVisible(true);
+                        }
                         }
                     }
                 //JOptionPane.showMessageDialog(null, "Bem vindo");
@@ -189,6 +196,12 @@ public class LoginTela extends javax.swing.JFrame {
     private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
         this.dispose();
     }//GEN-LAST:event_sairButtonActionPerformed
+
+    private void convidadoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convidadoButtonActionPerformed
+        TelaInicialAluno telaAluno = new TelaInicialAluno();
+        this.dispose();
+        telaAluno.setVisible(true);
+    }//GEN-LAST:event_convidadoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -227,10 +240,10 @@ public class LoginTela extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cadastroButton;
+    private javax.swing.JButton convidadoButton;
+    private javax.swing.JTextField emailTextField;
     private javax.swing.JButton entrarButton;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField nickTextField;
     private javax.swing.JButton sairButton;
     private javax.swing.JPasswordField senhaPasswordField;
     // End of variables declaration//GEN-END:variables

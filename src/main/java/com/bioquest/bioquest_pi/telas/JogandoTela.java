@@ -4,8 +4,16 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+
+import com.bioquest.bioquest_pi.bd.ConnectionFactory;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -16,13 +24,48 @@ import javax.swing.SwingUtilities;
  * @author mmgd0
  */
 public class JogandoTela extends javax.swing.JFrame {
+    private String resposta;
+    private int pontuacao;
+    private int num_questao = 1;
 
     /**
      * Creates new form JogandoTela
      */
     public JogandoTela() {
         initComponents();
+        setLocationRelativeTo(null);
+        fetch();
+        
     }
+    private void fetch(){
+         // Database query to fetch the name
+        String sql = String.format("SELECT * FROM questoes_db WHERE idquestoes = %d", num_questao); // Example query
+
+        try (Connection connection = new ConnectionFactory().obterConexao();
+             PreparedStatement ps = connection.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+             
+
+            if (rs.next()) {
+                resposta = rs.getString("alt_correta");
+                String pergunta = rs.getString("pergunta");
+                nameLabel.setText(pergunta); // Set the fetched name to the JLabel
+                String respostaA = rs.getString("alt_a");
+                respostaAButton.setText(respostaA);
+                String respostab = rs.getString("alt_b");
+                respostabButton.setText(respostab);
+                String respostac = rs.getString("alt_c");
+                respostacButton.setText(respostac);
+                String respostad = rs.getString("alt_d");
+                respostadButton.setText(respostad);
+            } else {
+                nameLabel.setText("No name found");
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
+        }
+    } 
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,23 +77,45 @@ public class JogandoTela extends javax.swing.JFrame {
     private void initComponents() {
 
         respostadButton = new javax.swing.JButton();
-        respostaaButton = new javax.swing.JButton();
+        respostaAButton = new javax.swing.JButton();
         respostacButton = new javax.swing.JButton();
         respostabButton = new javax.swing.JButton();
         anteriorButton = new javax.swing.JButton();
         proximaButton = new javax.swing.JButton();
         finalizarButton = new javax.swing.JButton();
         perguntaLabel = new javax.swing.JLabel();
+        fetchButton = new javax.swing.JButton();
+        nameLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         respostadButton.setText("Resposta D");
+        respostadButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                respostadButtonActionPerformed(evt);
+            }
+        });
 
-        respostaaButton.setText("Resposta A");
+        respostaAButton.setText("Resposta A");
+        respostaAButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                respostaAButtonActionPerformed(evt);
+            }
+        });
 
         respostacButton.setText("Resposta C");
+        respostacButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                respostacButtonActionPerformed(evt);
+            }
+        });
 
         respostabButton.setText("Resposta B");
+        respostabButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                respostabButtonActionPerformed(evt);
+            }
+        });
 
         anteriorButton.setText("Anterior");
 
@@ -69,6 +134,21 @@ public class JogandoTela extends javax.swing.JFrame {
         });
 
         perguntaLabel.setText("PERGUNTA AQUI!");
+        perguntaLabel.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                perguntaLabelComponentAdded(evt);
+            }
+        });
+
+        fetchButton.setText("fetch");
+        fetchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fetchButtonActionPerformed(evt);
+            }
+        });
+
+        nameLabel.setText("Name Here");
+        nameLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,25 +172,33 @@ public class JogandoTela extends javax.swing.JFrame {
                                 .addGap(40, 40, 40)
                                 .addComponent(respostadButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(respostaaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(respostaAButton, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
                                 .addComponent(respostabButton, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(35, 35, 35))
             .addGroup(layout.createSequentialGroup()
-                .addGap(196, 196, 196)
-                .addComponent(perguntaLabel)
+                .addContainerGap()
+                .addComponent(fetchButton)
+                .addGap(118, 118, 118)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(perguntaLabel)
+                    .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fetchButton)
+                    .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(83, 83, 83)
                 .addComponent(perguntaLabel)
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(respostaaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(respostaAButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(25, 25, 25)
                         .addComponent(respostacButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -133,9 +221,43 @@ public class JogandoTela extends javax.swing.JFrame {
     }//GEN-LAST:event_finalizarButtonActionPerformed
 
     private void proximaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proximaButtonActionPerformed
-        // TODO add your handling code here:
-        
+        ++num_questao;
+        fetch();
+                
     }//GEN-LAST:event_proximaButtonActionPerformed
+
+    private void perguntaLabelComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_perguntaLabelComponentAdded
+        
+    }//GEN-LAST:event_perguntaLabelComponentAdded
+
+    private void fetchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fetchButtonActionPerformed
+        System.out.println(pontuacao);
+    }//GEN-LAST:event_fetchButtonActionPerformed
+
+    private void respostaAButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respostaAButtonActionPerformed
+        respostaAButton.setEnabled(false);
+        if (resposta.equalsIgnoreCase("A")){
+            pontuacao += 10;
+        }
+    }//GEN-LAST:event_respostaAButtonActionPerformed
+
+    private void respostabButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respostabButtonActionPerformed
+        if (resposta.equalsIgnoreCase("B")){
+            pontuacao += 10;
+        }
+    }//GEN-LAST:event_respostabButtonActionPerformed
+
+    private void respostacButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respostacButtonActionPerformed
+        if (resposta.equalsIgnoreCase("C")){
+            pontuacao += 10;
+        }
+    }//GEN-LAST:event_respostacButtonActionPerformed
+
+    private void respostadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respostadButtonActionPerformed
+        if (resposta.equalsIgnoreCase("D")) {
+            pontuacao += 10;
+        }
+    }//GEN-LAST:event_respostadButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,10 +296,12 @@ public class JogandoTela extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton anteriorButton;
+    private javax.swing.JButton fetchButton;
     private javax.swing.JButton finalizarButton;
+    private javax.swing.JLabel nameLabel;
     private javax.swing.JLabel perguntaLabel;
     private javax.swing.JButton proximaButton;
-    private javax.swing.JButton respostaaButton;
+    private javax.swing.JButton respostaAButton;
     private javax.swing.JButton respostabButton;
     private javax.swing.JButton respostacButton;
     private javax.swing.JButton respostadButton;
