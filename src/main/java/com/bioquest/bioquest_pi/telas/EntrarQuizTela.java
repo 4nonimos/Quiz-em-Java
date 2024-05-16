@@ -4,6 +4,10 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import com.bioquest.bioquest_pi.bd.SalaDAO;
+import com.bioquest.bioquest_pi.modelo.Sala;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Thamires
@@ -15,6 +19,7 @@ public class EntrarQuizTela extends javax.swing.JFrame {
      */
     public EntrarQuizTela() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -32,7 +37,7 @@ public class EntrarQuizTela extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        idQuizTextField.setText("insira o id");
+        idQuizTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Insira o Id"));
         idQuizTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idQuizTextFieldActionPerformed(evt);
@@ -47,6 +52,11 @@ public class EntrarQuizTela extends javax.swing.JFrame {
         });
 
         entrarQuizButton.setText("entrar");
+        entrarQuizButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                entrarQuizButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -66,7 +76,7 @@ public class EntrarQuizTela extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(108, Short.MAX_VALUE)
+                .addContainerGap(91, Short.MAX_VALUE)
                 .addComponent(idQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(93, 93, 93)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -83,8 +93,31 @@ public class EntrarQuizTela extends javax.swing.JFrame {
     }//GEN-LAST:event_idQuizTextFieldActionPerformed
 
     private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
-        // TODO add your handling code here:
+        TelaInicialAluno telaAluno = new TelaInicialAluno();
+        this.dispose();
+        telaAluno.setVisible(true);
     }//GEN-LAST:event_voltarButtonActionPerformed
+
+    private void entrarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarQuizButtonActionPerformed
+        try{
+            var idsala = idQuizTextField.getText();
+            Sala s = new Sala();
+            int idsalaint = Integer.parseInt(idsala);
+            s.setIdsala(idsalaint);
+            SalaDAO dao = new SalaDAO();
+            if(dao.existe(s)){
+                JogandoTela jogaTela = new JogandoTela();
+                this.dispose();
+                jogaTela.setVisible(true);
+            }
+            
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo deu errado, tente novamente mais tarde");
+        }
+            
+    }//GEN-LAST:event_entrarQuizButtonActionPerformed
 
     /**
      * @param args the command line arguments

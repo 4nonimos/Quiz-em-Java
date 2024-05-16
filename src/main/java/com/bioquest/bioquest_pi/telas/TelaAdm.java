@@ -57,6 +57,11 @@ public class TelaAdm extends javax.swing.JFrame {
         admButton.setText("Painel ADM");
 
         gerenciarButton.setText("Gerenciar Quiz");
+        gerenciarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gerenciarButtonActionPerformed(evt);
+            }
+        });
 
         configButton.setText("Configurações");
         configButton.addActionListener(new java.awt.event.ActionListener() {
@@ -154,8 +159,16 @@ public class TelaAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_configButtonActionPerformed
 
     private void entrarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarQuizButtonActionPerformed
-        // TODO add your handling code here:
+        EntrarQuizTela entrarQuiz = new EntrarQuizTela();
+        this.dispose();
+        entrarQuiz.setVisible(true);
     }//GEN-LAST:event_entrarQuizButtonActionPerformed
+
+    private void gerenciarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerenciarButtonActionPerformed
+        CriarQuizTela quizTela = new CriarQuizTela();
+        this.dispose();
+        quizTela.setVisible(true);
+    }//GEN-LAST:event_gerenciarButtonActionPerformed
 
     /**
      * @param args the command line arguments

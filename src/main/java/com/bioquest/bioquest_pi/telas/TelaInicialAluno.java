@@ -15,6 +15,7 @@ public class TelaInicialAluno extends javax.swing.JFrame {
      */
     public TelaInicialAluno() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -55,6 +56,11 @@ public class TelaInicialAluno extends javax.swing.JFrame {
         });
 
         entrarQuizButton.setText("Entrar Quiz");
+        entrarQuizButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                entrarQuizButtonActionPerformed(evt);
+            }
+        });
 
         play1Button.setText("jogar1");
 
@@ -139,6 +145,12 @@ public class TelaInicialAluno extends javax.swing.JFrame {
         this.dispose();
         config.setVisible(true);
     }//GEN-LAST:event_configButtonActionPerformed
+
+    private void entrarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarQuizButtonActionPerformed
+        EntrarQuizTela entrarQuiz = new EntrarQuizTela();
+        this.dispose();
+        entrarQuiz.setVisible(true);
+    }//GEN-LAST:event_entrarQuizButtonActionPerformed
 
     /**
      * @param args the command line arguments

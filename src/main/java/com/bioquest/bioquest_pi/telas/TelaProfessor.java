@@ -15,6 +15,7 @@ public class TelaProfessor extends javax.swing.JFrame {
      */
     public TelaProfessor() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -27,11 +28,11 @@ public class TelaProfessor extends javax.swing.JFrame {
     private void initComponents() {
 
         jTextField1 = new javax.swing.JTextField();
-        SairLogin = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        VerRanking = new javax.swing.JButton();
-        GerenciarQuiz = new javax.swing.JButton();
-        IrParaConfigs = new javax.swing.JButton();
+        SairLoginButton = new javax.swing.JButton();
+        entrarQuizButton = new javax.swing.JButton();
+        VerRankingButton = new javax.swing.JButton();
+        GerenciarQuizButton = new javax.swing.JButton();
+        IrParaConfigsButton = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -39,25 +40,40 @@ public class TelaProfessor extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField1.setText("jTextField1");
-
-        SairLogin.setText("Sair");
-        SairLogin.addActionListener(new java.awt.event.ActionListener() {
+        jTextField1.setText("BioQuest FT AQUI");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SairLoginActionPerformed(evt);
+                jTextField1ActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Entrar Quiz");
-
-        VerRanking.setText("Ver Ranking");
-
-        GerenciarQuiz.setText("Gerenciar Quiz");
-
-        IrParaConfigs.setText("Configurações");
-        IrParaConfigs.addActionListener(new java.awt.event.ActionListener() {
+        SairLoginButton.setText("Sair");
+        SairLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IrParaConfigsActionPerformed(evt);
+                SairLoginButtonActionPerformed(evt);
+            }
+        });
+
+        entrarQuizButton.setText("Entrar Quiz");
+        entrarQuizButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                entrarQuizButtonActionPerformed(evt);
+            }
+        });
+
+        VerRankingButton.setText("Ver Ranking");
+
+        GerenciarQuizButton.setText("Gerenciar Quiz");
+        GerenciarQuizButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GerenciarQuizButtonActionPerformed(evt);
+            }
+        });
+
+        IrParaConfigsButton.setText("Configurações");
+        IrParaConfigsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IrParaConfigsButtonActionPerformed(evt);
             }
         });
 
@@ -77,25 +93,22 @@ public class TelaProfessor extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(SairLogin)
+                        .addComponent(SairLoginButton)
                         .addGap(90, 90, 90))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(entrarQuizButton)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(VerRanking)
+                        .addComponent(VerRankingButton)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(GerenciarQuiz)
+                        .addComponent(GerenciarQuizButton)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(IrParaConfigs)
+                        .addComponent(IrParaConfigsButton)
                         .addContainerGap())))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jButton2)
@@ -104,7 +117,10 @@ public class TelaProfessor extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton5)))
+                        .addComponent(jButton5))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(136, 136, 136)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -113,15 +129,15 @@ public class TelaProfessor extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(SairLogin)
+                .addComponent(SairLoginButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(entrarQuizButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(VerRanking)
+                .addComponent(VerRankingButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(GerenciarQuiz)
+                .addComponent(GerenciarQuizButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(IrParaConfigs)
+                .addComponent(IrParaConfigsButton)
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
@@ -134,19 +150,35 @@ public class TelaProfessor extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SairLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairLoginActionPerformed
+    private void SairLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairLoginButtonActionPerformed
         // TODO add your handling code here:
         LoginTela loginTela = new LoginTela();
         this.dispose();
         loginTela.setVisible(true);
-    }//GEN-LAST:event_SairLoginActionPerformed
+    }//GEN-LAST:event_SairLoginButtonActionPerformed
 
-    private void IrParaConfigsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IrParaConfigsActionPerformed
+    private void IrParaConfigsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IrParaConfigsButtonActionPerformed
         // TODO add your handling code here:
         Configuracao config = new Configuracao();
         this.dispose();
         config.setVisible(true);
-    }//GEN-LAST:event_IrParaConfigsActionPerformed
+    }//GEN-LAST:event_IrParaConfigsButtonActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void GerenciarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GerenciarQuizButtonActionPerformed
+        CriarQuizTela quizTela = new CriarQuizTela();
+        this.dispose();
+        quizTela.setVisible(true);
+    }//GEN-LAST:event_GerenciarQuizButtonActionPerformed
+
+    private void entrarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarQuizButtonActionPerformed
+        EntrarQuizTela entrarTela = new EntrarQuizTela();
+        this.dispose();
+        entrarTela.setVisible(true);
+    }//GEN-LAST:event_entrarQuizButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -184,11 +216,11 @@ public class TelaProfessor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton GerenciarQuiz;
-    private javax.swing.JButton IrParaConfigs;
-    private javax.swing.JButton SairLogin;
-    private javax.swing.JButton VerRanking;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton GerenciarQuizButton;
+    private javax.swing.JButton IrParaConfigsButton;
+    private javax.swing.JButton SairLoginButton;
+    private javax.swing.JButton VerRankingButton;
+    private javax.swing.JButton entrarQuizButton;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
