@@ -39,15 +39,15 @@
                                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                                       <Component id="proximaButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="respostacButton" min="-2" pref="191" max="-2" attributes="0"/>
+                                  <Component id="respostaCButton" min="-2" pref="191" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="respostadButton" max="32767" attributes="0"/>
+                              <Component id="respostaDButton" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="respostaAButton" min="-2" pref="191" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="respostabButton" min="-2" pref="188" max="-2" attributes="0"/>
+                              <Component id="respostaBButton" min="-2" pref="188" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -82,12 +82,12 @@
                   <Group type="102" alignment="2" attributes="0">
                       <Component id="respostaAButton" min="-2" pref="51" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="respostacButton" min="-2" pref="51" max="-2" attributes="0"/>
+                      <Component id="respostaCButton" min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="2" attributes="0">
-                      <Component id="respostabButton" min="-2" pref="51" max="-2" attributes="0"/>
+                      <Component id="respostaBButton" min="-2" pref="51" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="respostadButton" min="-2" pref="51" max="-2" attributes="0"/>
+                      <Component id="respostaDButton" min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -102,12 +102,12 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="respostadButton">
+    <Component class="javax.swing.JButton" name="respostaDButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Resposta D"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="respostadButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="respostaDButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="respostaAButton">
@@ -115,29 +115,33 @@
         <Property name="text" type="java.lang.String" value="Resposta A"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="respostaAButtonMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="respostaAButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="respostacButton">
+    <Component class="javax.swing.JButton" name="respostaCButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Resposta C"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="respostacButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="respostaCButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="respostabButton">
+    <Component class="javax.swing.JButton" name="respostaBButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Resposta B"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="respostabButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="respostaBButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="anteriorButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Anterior"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="anteriorButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="proximaButton">
       <Properties>

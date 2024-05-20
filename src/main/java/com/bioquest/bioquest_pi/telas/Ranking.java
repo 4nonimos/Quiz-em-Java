@@ -4,6 +4,12 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import com.bioquest.bioquest_pi.bd.ConnectionFactory;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Matheus
@@ -177,9 +183,21 @@ public class Ranking extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Relatorio relat = new Relatorio();
-        this.dispose();
-        relat.setVisible(true);
+        String sql = "SELECT alt_selecionada FROM ranking_db WHERE idCadastro = ?";
+        try (Connection connection = new ConnectionFactory().obterConexao();
+             PreparedStatement ps = connection.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+            if (rs.next()) {
+                    int id = rs.getInt("idCadastro");
+                     String alt = rs.getString("alt_selecionada");
+                } else {
+                    JOptionPane.showMessageDialog(null,"No name found");
+            }
+        
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
