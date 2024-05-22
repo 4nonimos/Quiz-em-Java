@@ -48,7 +48,9 @@ public class CadastroTela extends javax.swing.JFrame {
 
         emailTextField.setBackground(new java.awt.Color(39, 42, 50));
         emailTextField.setForeground(new java.awt.Color(255, 255, 255));
+        emailTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         emailTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite seu E-mail", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft JhengHei UI", 1, 12), new java.awt.Color(62, 67, 82))); // NOI18N
+        emailTextField.setCaretColor(new java.awt.Color(255, 255, 255));
         emailTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailTextFieldActionPerformed(evt);
@@ -57,7 +59,9 @@ public class CadastroTela extends javax.swing.JFrame {
 
         criaSenhaPasswordField.setBackground(new java.awt.Color(39, 42, 50));
         criaSenhaPasswordField.setForeground(new java.awt.Color(255, 255, 255));
+        criaSenhaPasswordField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         criaSenhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite uma Senha", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft JhengHei UI", 1, 12), new java.awt.Color(62, 67, 82))); // NOI18N
+        criaSenhaPasswordField.setCaretColor(new java.awt.Color(255, 255, 255));
         criaSenhaPasswordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 criaSenhaPasswordFieldActionPerformed(evt);
@@ -76,7 +80,9 @@ public class CadastroTela extends javax.swing.JFrame {
 
         nomeUsuarioTextField.setBackground(new java.awt.Color(39, 42, 50));
         nomeUsuarioTextField.setForeground(new java.awt.Color(255, 255, 255));
+        nomeUsuarioTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         nomeUsuarioTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite seu Nome", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft JhengHei UI", 1, 12), new java.awt.Color(62, 67, 82))); // NOI18N
+        nomeUsuarioTextField.setCaretColor(new java.awt.Color(255, 255, 255));
         nomeUsuarioTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeUsuarioTextFieldActionPerformed(evt);
@@ -105,7 +111,9 @@ public class CadastroTela extends javax.swing.JFrame {
 
         idadeTextField.setBackground(new java.awt.Color(39, 42, 50));
         idadeTextField.setForeground(new java.awt.Color(255, 255, 255));
+        idadeTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         idadeTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite sua Idade", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft JhengHei UI", 1, 12), new java.awt.Color(62, 67, 82))); // NOI18N
+        idadeTextField.setCaretColor(new java.awt.Color(255, 255, 255));
         idadeTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idadeTextFieldActionPerformed(evt);
