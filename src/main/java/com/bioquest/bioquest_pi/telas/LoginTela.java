@@ -45,6 +45,7 @@ public class LoginTela extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         emailTextField.setBackground(new java.awt.Color(24, 26, 31));
+        emailTextField.setForeground(new java.awt.Color(255, 255, 255));
         emailTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite seu RA ou E-mail", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft JhengHei UI", 1, 14), new java.awt.Color(62, 67, 82))); // NOI18N
         emailTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         emailTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -54,6 +55,7 @@ public class LoginTela extends javax.swing.JFrame {
         });
 
         senhaPasswordField.setBackground(new java.awt.Color(24, 26, 31));
+        senhaPasswordField.setForeground(new java.awt.Color(255, 255, 255));
         senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite sua senha", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft JhengHei UI", 1, 14), new java.awt.Color(62, 67, 82))); // NOI18N
         senhaPasswordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,8 +173,6 @@ public class LoginTela extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(convidadoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-
-        emailTextField.getAccessibleContext().setAccessibleName("Digite seu RA ou E-mail");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
