@@ -5,6 +5,7 @@
 package com.bioquest.bioquest_pi.telas;
 
 import com.bioquest.bioquest_pi.bd.ConnectionFactory;
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,6 +22,7 @@ public class Ranking extends javax.swing.JFrame {
      */
     public Ranking() {
         initComponents();
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**

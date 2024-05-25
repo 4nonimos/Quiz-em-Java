@@ -4,6 +4,8 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import java.awt.Color;
+
 /**
  *
  * @author Thamires aa
@@ -15,6 +17,7 @@ public class CriarQuizTela extends javax.swing.JFrame {
      */
     public CriarQuizTela() {
         initComponents();
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**

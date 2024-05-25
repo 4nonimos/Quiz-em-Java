@@ -6,6 +6,7 @@ package com.bioquest.bioquest_pi.telas;
 
 import com.bioquest.bioquest_pi.bd.UsuarioCAD;
 import com.bioquest.bioquest_pi.modelo.Usuario;
+import java.awt.Color;
 
 /**
  *
@@ -19,6 +20,7 @@ public class CadastroTela extends javax.swing.JFrame {
     public CadastroTela() {
         initComponents();
         setLocationRelativeTo(null);
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**
@@ -196,9 +198,9 @@ public class CadastroTela extends javax.swing.JFrame {
                 .addGap(5, 5, 5)
                 .addComponent(criaSenhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(verSenhaToggleButton)
-                    .addComponent(dadosLabel))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(dadosLabel)
+                    .addComponent(verSenhaToggleButton))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(EnviarParaBancoButton, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)

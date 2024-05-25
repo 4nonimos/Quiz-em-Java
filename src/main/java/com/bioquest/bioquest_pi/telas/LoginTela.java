@@ -6,6 +6,7 @@ package com.bioquest.bioquest_pi.telas;
 
 import com.bioquest.bioquest_pi.bd.UsuarioDAO;
 import com.bioquest.bioquest_pi.modelo.Usuario;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +21,7 @@ public class LoginTela extends javax.swing.JFrame {
     public LoginTela() {
         initComponents();
         setLocationRelativeTo(null);
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**

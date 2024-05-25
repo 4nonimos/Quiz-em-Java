@@ -4,6 +4,8 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import java.awt.Color;
+
 /**
  *
  * @author Matheus
@@ -15,6 +17,7 @@ public class ProfTela extends javax.swing.JFrame {
      */
     public ProfTela() {
         initComponents();
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**

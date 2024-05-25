@@ -6,6 +6,7 @@ package com.bioquest.bioquest_pi.telas;
 
 import com.bioquest.bioquest_pi.bd.SalaDAO;
 import com.bioquest.bioquest_pi.modelo.Sala;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +21,7 @@ public class EntrarQuizTela extends javax.swing.JFrame {
     public EntrarQuizTela() {
         initComponents();
         setLocationRelativeTo(null);
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**

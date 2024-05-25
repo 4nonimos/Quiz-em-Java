@@ -46,6 +46,7 @@ public class JogandoTela extends javax.swing.JFrame {
      * Creates new form JogandoTela
      */
     public JogandoTela() {
+        getContentPane().setBackground(Color.BLACK);
         initComponents();
         setLocationRelativeTo(null);
         quest_resp = new ArrayList();

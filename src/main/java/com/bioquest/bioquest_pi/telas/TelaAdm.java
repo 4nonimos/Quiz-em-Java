@@ -4,6 +4,8 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import java.awt.Color;
+
 /**
  *
  * @author Matheus aa 
@@ -15,6 +17,7 @@ public class TelaAdm extends javax.swing.JFrame {
      */
     public TelaAdm() {
         initComponents();
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**

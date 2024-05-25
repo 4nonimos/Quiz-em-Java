@@ -4,6 +4,8 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import java.awt.Color;
+
 /**
  *
  * @author Thamires
@@ -15,6 +17,7 @@ public class ErroRelatorioPopUpTela extends javax.swing.JFrame {
      */
     public ErroRelatorioPopUpTela() {
         initComponents();
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**

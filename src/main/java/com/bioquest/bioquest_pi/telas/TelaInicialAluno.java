@@ -4,6 +4,8 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import java.awt.Color;
+
 /**
  *
  * @author Matheus
@@ -16,6 +18,7 @@ public class TelaInicialAluno extends javax.swing.JFrame {
     public TelaInicialAluno() {
         initComponents();
         setLocationRelativeTo(null);
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**

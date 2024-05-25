@@ -4,6 +4,8 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import java.awt.Color;
+
 /**
  *
  * @author mmgd0
@@ -15,6 +17,7 @@ public class PopUpDeletQuiz extends javax.swing.JFrame {
      */
     public PopUpDeletQuiz() {
         initComponents();
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**
