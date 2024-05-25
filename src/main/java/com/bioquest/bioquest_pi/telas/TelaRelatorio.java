@@ -5,6 +5,7 @@
 package com.bioquest.bioquest_pi.telas;
 
 import com.bioquest.bioquest_pi.bd.ConnectionFactory;
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -26,6 +27,7 @@ public class TelaRelatorio extends javax.swing.JFrame {
      */
     public TelaRelatorio(int pontuacao, int pont_total, long tempTotal, String respo_selec, int num_questao) {
         initComponents();
+        getContentPane().setBackground(Color.BLACK);
         setLocationRelativeTo(null);
         pontosLabel.setText("Seus pontos: " + pontuacao);
         pontosMaxLabel.setText("Total Pontos: " + pont_total);
