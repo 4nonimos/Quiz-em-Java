@@ -35,90 +35,28 @@ public class Ranking extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        rankingText = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        nomeQuiz = new javax.swing.JTextArea();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        nomeQuiz2 = new javax.swing.JTextArea();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        nomeCompletoVer = new javax.swing.JTextArea();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        nicknameVer = new javax.swing.JTextArea();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        acertosVer = new javax.swing.JTextArea();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        tempoVer = new javax.swing.JTextArea();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        totalPerguntas = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        rankingTable = new javax.swing.JTable();
+        voltarButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        rankingText.setColumns(20);
-        rankingText.setRows(5);
-        rankingText.setText("RANKING!");
-        jScrollPane1.setViewportView(rankingText);
+        rankingTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(rankingTable);
 
-        jScrollPane2.setBorder(null);
-        jScrollPane2.setHorizontalScrollBar(null);
-
-        nomeQuiz.setColumns(20);
-        nomeQuiz.setRows(5);
-        nomeQuiz.setText("nomeQuiz");
-        jScrollPane2.setViewportView(nomeQuiz);
-
-        jScrollPane3.setBorder(null);
-        jScrollPane3.setHorizontalScrollBar(null);
-
-        nomeQuiz2.setColumns(20);
-        nomeQuiz2.setRows(5);
-        nomeQuiz2.setText("nomeQuiz");
-        jScrollPane3.setViewportView(nomeQuiz2);
-
-        jScrollPane4.setBorder(null);
-        jScrollPane4.setHorizontalScrollBar(null);
-
-        nomeCompletoVer.setColumns(20);
-        nomeCompletoVer.setRows(5);
-        nomeCompletoVer.setText("Nome Completo");
-        jScrollPane4.setViewportView(nomeCompletoVer);
-
-        jScrollPane5.setBorder(null);
-        jScrollPane5.setHorizontalScrollBar(null);
-
-        nicknameVer.setColumns(20);
-        nicknameVer.setRows(5);
-        nicknameVer.setText("nickname");
-        jScrollPane5.setViewportView(nicknameVer);
-
-        jScrollPane6.setBorder(null);
-        jScrollPane6.setHorizontalScrollBar(null);
-
-        acertosVer.setColumns(20);
-        acertosVer.setRows(5);
-        acertosVer.setText("Acertos");
-        jScrollPane6.setViewportView(acertosVer);
-
-        jScrollPane7.setBorder(null);
-        jScrollPane7.setHorizontalScrollBar(null);
-
-        tempoVer.setColumns(20);
-        tempoVer.setRows(5);
-        tempoVer.setText("tempo");
-        jScrollPane7.setViewportView(tempoVer);
-
-        jScrollPane8.setBorder(null);
-        jScrollPane8.setHorizontalScrollBar(null);
-
-        totalPerguntas.setColumns(20);
-        totalPerguntas.setRows(5);
-        totalPerguntas.setText("Total Perguntas");
-        jScrollPane8.setViewportView(totalPerguntas);
-
-        jButton1.setText("Ver Relatorio");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        voltarButton.setText("Voltar");
+        voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                voltarButtonActionPerformed(evt);
             }
         });
 
@@ -126,81 +64,31 @@ public class Ranking extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(389, 389, 389)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(233, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(212, 212, 212))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(184, 184, 184)
-                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(165, 165, 165))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(41, 41, 41))
+                .addComponent(voltarButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(39, 39, 39)
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(20, 20, 20)
-                .addComponent(jButton1)
-                .addContainerGap(317, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(23, Short.MAX_VALUE)
+                .addComponent(voltarButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
         // TODO add your handling code here:
-        String sql = "SELECT alt_selecionada FROM ranking_db WHERE idCadastro = ?";
-        try (Connection connection = new ConnectionFactory().obterConexao();
-             PreparedStatement ps = connection.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
-            if (rs.next()) {
-                    int id = rs.getInt("idCadastro");
-                     String alt = rs.getString("alt_selecionada");
-                } else {
-                    JOptionPane.showMessageDialog(null,"No name found");
-            }
-        
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
-        }
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_voltarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,22 +126,8 @@ public class Ranking extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea acertosVer;
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JTextArea nicknameVer;
-    private javax.swing.JTextArea nomeCompletoVer;
-    private javax.swing.JTextArea nomeQuiz;
-    private javax.swing.JTextArea nomeQuiz2;
-    private javax.swing.JTextArea rankingText;
-    private javax.swing.JTextArea tempoVer;
-    private javax.swing.JTextArea totalPerguntas;
+    private javax.swing.JTable rankingTable;
+    private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables
 }
