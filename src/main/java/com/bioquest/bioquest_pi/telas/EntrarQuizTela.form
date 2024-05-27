@@ -28,10 +28,10 @@
               <Component id="voltarButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
               <Component id="entrarQuizButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+              <EmptySpace pref="55" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="idQuizTextField" min="-2" pref="110" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -40,14 +40,14 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace pref="91" max="32767" attributes="0"/>
+              <EmptySpace pref="90" max="32767" attributes="0"/>
               <Component id="idQuizTextField" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="entrarQuizButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="voltarButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+              <EmptySpace pref="52" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -55,12 +55,16 @@
   <SubComponents>
     <Component class="javax.swing.JTextField" name="idQuizTextField">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="32" green="2a" red="27" type="rgb"/>
+        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="Insira o Id">
               <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
                 <EmptyBorder/>
               </Border>
+              <Color PropertyName="color" blue="52" green="43" red="3e" type="rgb"/>
             </TitledBorder>
           </Border>
         </Property>
@@ -71,6 +75,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="voltarButton">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="31" green="31" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="voltar"/>
       </Properties>
       <Events>
@@ -79,6 +86,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="entrarQuizButton">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="35" green="df" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="entrar"/>
       </Properties>
       <Events>

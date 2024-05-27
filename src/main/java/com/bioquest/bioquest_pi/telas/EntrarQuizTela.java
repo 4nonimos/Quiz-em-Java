@@ -39,13 +39,15 @@ public class EntrarQuizTela extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        idQuizTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Insira o Id"));
+        idQuizTextField.setBackground(new java.awt.Color(39, 42, 50));
+        idQuizTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Insira o Id", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(62, 67, 82))); // NOI18N
         idQuizTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idQuizTextFieldActionPerformed(evt);
             }
         });
 
+        voltarButton.setBackground(new java.awt.Color(255, 49, 49));
         voltarButton.setText("voltar");
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,6 +55,7 @@ public class EntrarQuizTela extends javax.swing.JFrame {
             }
         });
 
+        entrarQuizButton.setBackground(new java.awt.Color(255, 223, 53));
         entrarQuizButton.setText("entrar");
         entrarQuizButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,22 +72,22 @@ public class EntrarQuizTela extends javax.swing.JFrame {
                 .addComponent(voltarButton)
                 .addGap(192, 192, 192)
                 .addComponent(entrarQuizButton)
-                .addGap(55, 55, 55))
+                .addContainerGap(55, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(141, 141, 141)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(idQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(91, Short.MAX_VALUE)
+                .addContainerGap(90, Short.MAX_VALUE)
                 .addComponent(idQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(93, 93, 93)
+                .addGap(94, 94, 94)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(entrarQuizButton)
                     .addComponent(voltarButton))
-                .addGap(52, 52, 52))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         pack();
