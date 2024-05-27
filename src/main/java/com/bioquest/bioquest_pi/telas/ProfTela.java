@@ -29,21 +29,20 @@ public class ProfTela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
         SairLogin = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         VerRanking = new javax.swing.JButton();
         GerenciarQuiz = new javax.swing.JButton();
-        IrParaConfigs = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        bioquestLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField1.setText("jTextField1");
-
+        SairLogin.setBackground(new java.awt.Color(255, 49, 49));
+        SairLogin.setForeground(new java.awt.Color(255, 255, 255));
         SairLogin.setText("Sair");
         SairLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,26 +50,45 @@ public class ProfTela extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(21, 255, 0));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Entrar Quiz");
 
+        VerRanking.setBackground(new java.awt.Color(255, 98, 49));
+        VerRanking.setForeground(new java.awt.Color(255, 255, 255));
         VerRanking.setText("Ver Ranking");
 
+        GerenciarQuiz.setBackground(new java.awt.Color(255, 98, 49));
+        GerenciarQuiz.setForeground(new java.awt.Color(255, 255, 255));
         GerenciarQuiz.setText("Gerenciar Quiz");
-
-        IrParaConfigs.setText("Configurações");
-        IrParaConfigs.addActionListener(new java.awt.event.ActionListener() {
+        GerenciarQuiz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IrParaConfigsActionPerformed(evt);
+                GerenciarQuizActionPerformed(evt);
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(255, 223, 53));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("jogar 1");
 
+        jButton3.setBackground(new java.awt.Color(255, 223, 53));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("jogar 2");
 
+        jButton4.setBackground(new java.awt.Color(255, 223, 53));
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("jogar 3");
 
+        jButton5.setBackground(new java.awt.Color(255, 223, 53));
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("jogar 4");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        bioquestLabel.setText("BIOQUEST FOTO AQUI");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,15 +108,9 @@ public class ProfTela extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(GerenciarQuiz)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(IrParaConfigs)
                         .addContainerGap())))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jButton2)
@@ -107,14 +119,17 @@ public class ProfTela extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton5)))
+                        .addComponent(jButton5))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(128, 128, 128)
+                        .addComponent(bioquestLabel)))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(bioquestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(SairLogin)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -123,9 +138,7 @@ public class ProfTela extends javax.swing.JFrame {
                 .addComponent(VerRanking)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(GerenciarQuiz)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(IrParaConfigs)
-                .addGap(31, 31, 31)
+                .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton3)
@@ -144,12 +157,13 @@ public class ProfTela extends javax.swing.JFrame {
         loginTela.setVisible(true);
     }//GEN-LAST:event_SairLoginActionPerformed
 
-    private void IrParaConfigsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IrParaConfigsActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        Configuracao config = new Configuracao();
-        this.dispose();
-        config.setVisible(true);
-    }//GEN-LAST:event_IrParaConfigsActionPerformed
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void GerenciarQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GerenciarQuizActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GerenciarQuizActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,14 +203,13 @@ public class ProfTela extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton GerenciarQuiz;
-    private javax.swing.JButton IrParaConfigs;
     private javax.swing.JButton SairLogin;
     private javax.swing.JButton VerRanking;
+    private javax.swing.JLabel bioquestLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
