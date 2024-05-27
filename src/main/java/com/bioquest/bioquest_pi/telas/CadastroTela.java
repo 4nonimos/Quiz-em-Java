@@ -72,8 +72,8 @@ public class CadastroTela extends javax.swing.JFrame {
 
         verSenhaToggleButton.setBackground(new java.awt.Color(39, 42, 50));
         verSenhaToggleButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        verSenhaToggleButton.setForeground(new java.awt.Color(62, 67, 82));
         verSenhaToggleButton.setText("ver senha");
+        verSenhaToggleButton.setOpaque(true);
         verSenhaToggleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 verSenhaToggleButtonActionPerformed(evt);
@@ -95,6 +95,7 @@ public class CadastroTela extends javax.swing.JFrame {
         voltarParaLoginButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
         voltarParaLoginButton.setForeground(new java.awt.Color(255, 255, 255));
         voltarParaLoginButton.setText("Voltar ao login");
+        voltarParaLoginButton.setMaximumSize(null);
         voltarParaLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 voltarParaLoginButtonActionPerformed(evt);
@@ -105,6 +106,7 @@ public class CadastroTela extends javax.swing.JFrame {
         EnviarParaBancoButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
         EnviarParaBancoButton.setForeground(new java.awt.Color(255, 255, 255));
         EnviarParaBancoButton.setText("AVANÇAR");
+        EnviarParaBancoButton.setMaximumSize(new java.awt.Dimension(142, 58));
         EnviarParaBancoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EnviarParaBancoButtonActionPerformed(evt);
@@ -123,21 +125,27 @@ public class CadastroTela extends javax.swing.JFrame {
         });
 
         cadastroLabel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
+        cadastroLabel.setForeground(new java.awt.Color(255, 255, 255));
         cadastroLabel.setText("Cadastrar");
 
         dadosLabel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        dadosLabel.setForeground(new java.awt.Color(255, 255, 255));
         dadosLabel.setText("Usaremos seus dados para poder salvar/gravar seu progresso!");
 
         loginLabel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        loginLabel.setForeground(new java.awt.Color(255, 255, 255));
         loginLabel.setText("Login");
 
         nomeLabel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        nomeLabel.setForeground(new java.awt.Color(255, 255, 255));
         nomeLabel.setText("Nome");
 
         senhaLabel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        senhaLabel.setForeground(new java.awt.Color(255, 255, 255));
         senhaLabel.setText("Senha");
 
         jLabel4.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Idade");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -145,41 +153,40 @@ public class CadastroTela extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(loginLabel)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(nomeLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(senhaLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(criaSenhaPasswordField, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cadastroLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(emailTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel4)
-                                        .addComponent(idadeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(nomeUsuarioTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(criaSenhaPasswordField, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cadastroLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(emailTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
+                                .addComponent(nomeUsuarioTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(voltarParaLoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(EnviarParaBancoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel4)
+                                            .addComponent(idadeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createSequentialGroup()
-                                            .addComponent(voltarParaLoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(EnviarParaBancoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(85, 85, 85)
-                                            .addComponent(dadosLabel)))
-                                    .addGap(38, 38, 38)
-                                    .addComponent(verSenhaToggleButton))))
-                        .addContainerGap(221, Short.MAX_VALUE))))
+                                            .addComponent(dadosLabel)
+                                            .addGap(38, 38, 38)
+                                            .addComponent(verSenhaToggleButton))))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addContainerGap(50, Short.MAX_VALUE)
                 .addComponent(cadastroLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(loginLabel)
@@ -202,10 +209,10 @@ public class CadastroTela extends javax.swing.JFrame {
                     .addComponent(dadosLabel)
                     .addComponent(verSenhaToggleButton))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(EnviarParaBancoButton, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
                     .addComponent(voltarParaLoginButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(102, 102, 102))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         pack();
