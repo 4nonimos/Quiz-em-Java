@@ -53,6 +53,7 @@ public class CadastroTela extends javax.swing.JFrame {
         emailTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         emailTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Digite seu E-mail", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft JhengHei UI", 1, 12), new java.awt.Color(62, 67, 82))); // NOI18N
         emailTextField.setCaretColor(new java.awt.Color(255, 255, 255));
+        emailTextField.setDisabledTextColor(new java.awt.Color(62, 67, 82));
         emailTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailTextFieldActionPerformed(evt);
