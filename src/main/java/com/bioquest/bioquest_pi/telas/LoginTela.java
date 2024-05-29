@@ -43,6 +43,7 @@ public class LoginTela extends javax.swing.JFrame {
         loginLabel = new javax.swing.JLabel();
         senhaLabel = new javax.swing.JLabel();
         facaloginLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -121,6 +122,9 @@ public class LoginTela extends javax.swing.JFrame {
         facaloginLabel.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
         facaloginLabel.setText("Faça seu Login");
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Group 18.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -155,6 +159,8 @@ public class LoginTela extends javax.swing.JFrame {
                         .addComponent(convidadoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(32, 32, 32))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addGap(124, 124, 124)
                 .addComponent(jLabel1)
                 .addGap(196, 196, 196))
         );
@@ -164,6 +170,8 @@ public class LoginTela extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addComponent(sairButton)
                 .addGap(39, 39, 39)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addGap(25, 25, 25)
                 .addComponent(facaloginLabel)
@@ -297,6 +305,7 @@ public class LoginTela extends javax.swing.JFrame {
     private javax.swing.JButton entrarButton;
     private javax.swing.JLabel facaloginLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JButton sairButton;
     private javax.swing.JLabel senhaLabel;

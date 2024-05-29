@@ -63,6 +63,8 @@
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
           </Group>
@@ -74,6 +76,8 @@
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="sairButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               <Component id="facaloginLabel" min="-2" max="-2" attributes="0"/>
@@ -256,6 +260,14 @@
           <Font name="Microsoft YaHei UI" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Fa&#xe7;a seu Login"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/Group 18.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
   </SubComponents>
