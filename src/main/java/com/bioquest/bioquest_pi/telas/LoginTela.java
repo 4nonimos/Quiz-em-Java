@@ -35,7 +35,6 @@ public class LoginTela extends javax.swing.JFrame {
 
         emailTextField = new javax.swing.JTextField();
         senhaPasswordField = new javax.swing.JPasswordField();
-        jLabel1 = new javax.swing.JLabel();
         entrarButton = new javax.swing.JButton();
         cadastroButton = new javax.swing.JButton();
         sairButton = new javax.swing.JButton();
@@ -43,7 +42,7 @@ public class LoginTela extends javax.swing.JFrame {
         loginLabel = new javax.swing.JLabel();
         senhaLabel = new javax.swing.JLabel();
         facaloginLabel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        imagemLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,9 +68,6 @@ public class LoginTela extends javax.swing.JFrame {
                 senhaPasswordFieldActionPerformed(evt);
             }
         });
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/bioquest/Group 18.png"))); // NOI18N
 
         entrarButton.setBackground(new java.awt.Color(255, 223, 53));
         entrarButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
@@ -122,8 +118,7 @@ public class LoginTela extends javax.swing.JFrame {
         facaloginLabel.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
         facaloginLabel.setText("Faça seu Login");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Group 18.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        imagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -136,7 +131,9 @@ public class LoginTela extends javax.swing.JFrame {
                         .addComponent(sairButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(309, 309, 309)
-                        .addComponent(facaloginLabel))
+                        .addComponent(facaloginLabel)
+                        .addGap(134, 134, 134)
+                        .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(373, 373, 373)
                         .addComponent(loginLabel))
@@ -158,23 +155,19 @@ public class LoginTela extends javax.swing.JFrame {
                         .addGap(550, 550, 550)
                         .addComponent(convidadoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(32, 32, 32))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(124, 124, 124)
-                .addComponent(jLabel1)
-                .addGap(196, 196, 196))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(sairButton)
-                .addGap(39, 39, 39)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(25, 25, 25)
-                .addComponent(facaloginLabel)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(131, 131, 131)
+                        .addComponent(facaloginLabel))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(loginLabel)
                 .addGap(6, 6, 6)
@@ -304,8 +297,7 @@ public class LoginTela extends javax.swing.JFrame {
     private javax.swing.JTextField emailTextField;
     private javax.swing.JButton entrarButton;
     private javax.swing.JLabel facaloginLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel imagemLabel;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JButton sairButton;
     private javax.swing.JLabel senhaLabel;
