@@ -201,9 +201,11 @@ public class LoginTela extends javax.swing.JFrame {
             var email = emailTextField.getText();
             //2. Pegar a senha digitada pelo usuário
             var senha = new String(senhaPasswordField.getPassword());
+            var car = new String();
             //3. Verificar se ambos são iguais a admin 
             //string pool
-            Usuario u = new Usuario();
+            Usuario u;
+            u = new Usuario(email,senha,car);
             //var cargo = u.getCargo();
             u.setEmail(email);
             u.setSenha(senha);

@@ -4,7 +4,9 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import com.bioquest.bioquest_pi.modelo.Usuario;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -65,6 +67,11 @@ public class TelaProfessor extends javax.swing.JFrame {
         });
 
         VerRankingButton.setText("Ver Ranking");
+        VerRankingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VerRankingButtonActionPerformed(evt);
+            }
+        });
 
         GerenciarQuizButton.setText("Gerenciar Quiz");
         GerenciarQuizButton.addActionListener(new java.awt.event.ActionListener() {
@@ -182,6 +189,17 @@ public class TelaProfessor extends javax.swing.JFrame {
         this.dispose();
         entrarTela.setVisible(true);
     }//GEN-LAST:event_entrarQuizButtonActionPerformed
+
+    private void VerRankingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerRankingButtonActionPerformed
+        String idQuiz;
+        int number;
+        idQuiz = JOptionPane.showInputDialog("Insira o Id do Quiz");
+        number = Integer.parseInt(idQuiz);
+        Usuario Usuario = null;
+        InfoRanking ranking = new InfoRanking();
+        this.dispose();
+        ranking.setVisible(true);
+    }//GEN-LAST:event_VerRankingButtonActionPerformed
 
     /**
      * @param args the command line arguments

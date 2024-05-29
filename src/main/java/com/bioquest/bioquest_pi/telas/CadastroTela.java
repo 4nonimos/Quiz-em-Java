@@ -236,7 +236,8 @@ public class CadastroTela extends javax.swing.JFrame {
     }//GEN-LAST:event_voltarParaLoginButtonActionPerformed
 
     private void EnviarParaBancoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarParaBancoButtonActionPerformed
-        Usuario u = new Usuario();
+        Usuario u;
+        u = new Usuario(emailTextField.getText(),new String(criaSenhaPasswordField.getPassword()),nomeUsuarioTextField.getText());
         u.setEmail(emailTextField.getText());
         u.setSenha(new String(criaSenhaPasswordField.getPassword()));
         u.setIdade(idadeTextField.getText());

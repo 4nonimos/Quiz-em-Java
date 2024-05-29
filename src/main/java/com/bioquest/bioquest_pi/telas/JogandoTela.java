@@ -365,6 +365,7 @@ public class JogandoTela extends javax.swing.JFrame {
         quest_resp.add(num_questao);
         respo_selec = "A";
         alt_selecionada = "A";
+        atualizarBotao(false);
         Relatorio r = new Relatorio(); 
         RelatorioDAO cad = new RelatorioDAO();
         try{       

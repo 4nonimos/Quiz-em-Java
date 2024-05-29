@@ -36,7 +36,7 @@ public class RelatorioDAO {
         //8. responser se achou ou não
         return achou;
     }
-         public void inserir (Relatorio r){
+        public void inserir (Relatorio r){
     //1: Definir o comando SQL
     String sql = "INSERT INTO relatorio_db(idCadastro,alt_selecionada) VALUES (?, ?)";
     //2: Abrir uma conexão
