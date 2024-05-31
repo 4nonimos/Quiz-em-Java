@@ -24,7 +24,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace pref="82" max="32767" attributes="0"/>
+              <EmptySpace pref="69" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="voltarButton" min="-2" max="-2" attributes="0"/>
@@ -54,7 +54,7 @@
     <Component class="javax.swing.JLabel" name="convidadoLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Microsoft JhengHei UI" size="12" style="1"/>
+          <Font name="Microsoft YaHei UI" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Convidados n&#xe3;o tem hist&#xf3;rico de relat&#xf3;rios salvo"/>
       </Properties>

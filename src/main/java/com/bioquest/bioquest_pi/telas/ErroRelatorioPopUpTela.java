@@ -34,7 +34,7 @@ public class ErroRelatorioPopUpTela extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        convidadoLabel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        convidadoLabel.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         convidadoLabel.setText("Convidados não tem histórico de relatórios salvo");
 
         voltarButton.setBackground(new java.awt.Color(255, 98, 49));
@@ -47,7 +47,7 @@ public class ErroRelatorioPopUpTela extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(82, Short.MAX_VALUE)
+                .addContainerGap(69, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(voltarButton)
