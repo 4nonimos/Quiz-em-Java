@@ -76,7 +76,7 @@
     <Component class="javax.swing.JLabel" name="configLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Microsoft JhengHei UI" size="12" style="1"/>
+          <Font name="Microsoft YaHei UI" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Configura&#xe7;&#xf5;es"/>
       </Properties>

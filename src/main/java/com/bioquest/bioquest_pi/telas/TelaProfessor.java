@@ -53,7 +53,7 @@ public class TelaProfessor extends javax.swing.JFrame {
         });
 
         SairLoginButton.setBackground(new java.awt.Color(255, 49, 49));
-        SairLoginButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        SairLoginButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         SairLoginButton.setForeground(new java.awt.Color(255, 255, 255));
         SairLoginButton.setText("Sair");
         SairLoginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -62,8 +62,8 @@ public class TelaProfessor extends javax.swing.JFrame {
             }
         });
 
-        entrarQuizButton.setBackground(new java.awt.Color(0, 255, 56));
-        entrarQuizButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        entrarQuizButton.setBackground(new java.awt.Color(131, 177, 0));
+        entrarQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         entrarQuizButton.setForeground(new java.awt.Color(255, 255, 255));
         entrarQuizButton.setText("Entrar Quiz");
         entrarQuizButton.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +73,7 @@ public class TelaProfessor extends javax.swing.JFrame {
         });
 
         VerRankingButton.setBackground(new java.awt.Color(255, 98, 49));
-        VerRankingButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        VerRankingButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         VerRankingButton.setForeground(new java.awt.Color(255, 255, 255));
         VerRankingButton.setText("Ver Ranking");
         VerRankingButton.addActionListener(new java.awt.event.ActionListener() {
@@ -82,6 +82,7 @@ public class TelaProfessor extends javax.swing.JFrame {
             }
         });
 
+        GerenciarQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         GerenciarQuizButton.setText("Gerenciar Quiz");
         GerenciarQuizButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +91,7 @@ public class TelaProfessor extends javax.swing.JFrame {
         });
 
         IrParaConfigsButton.setBackground(new java.awt.Color(50, 103, 238));
-        IrParaConfigsButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        IrParaConfigsButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         IrParaConfigsButton.setForeground(new java.awt.Color(255, 255, 255));
         IrParaConfigsButton.setText("Configurações");
         IrParaConfigsButton.addActionListener(new java.awt.event.ActionListener() {
@@ -151,7 +152,7 @@ public class TelaProfessor extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(SairLoginButton)
+                .addComponent(SairLoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(entrarQuizButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -166,7 +167,7 @@ public class TelaProfessor extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();

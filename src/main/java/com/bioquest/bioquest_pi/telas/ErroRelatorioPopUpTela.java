@@ -38,7 +38,7 @@ public class ErroRelatorioPopUpTela extends javax.swing.JFrame {
         convidadoLabel.setText("Convidados não tem histórico de relatórios salvo");
 
         voltarButton.setBackground(new java.awt.Color(255, 98, 49));
-        voltarButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        voltarButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         voltarButton.setForeground(new java.awt.Color(255, 255, 255));
         voltarButton.setText("Voltar");
 

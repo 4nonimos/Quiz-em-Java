@@ -42,6 +42,7 @@ public class ProfTela extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         SairLogin.setBackground(new java.awt.Color(255, 49, 49));
+        SairLogin.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         SairLogin.setForeground(new java.awt.Color(255, 255, 255));
         SairLogin.setText("Sair");
         SairLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -50,15 +51,18 @@ public class ProfTela extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(21, 255, 0));
+        jButton1.setBackground(new java.awt.Color(131, 177, 0));
+        jButton1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Entrar Quiz");
 
         VerRanking.setBackground(new java.awt.Color(255, 98, 49));
+        VerRanking.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         VerRanking.setForeground(new java.awt.Color(255, 255, 255));
         VerRanking.setText("Ver Ranking");
 
         GerenciarQuiz.setBackground(new java.awt.Color(255, 98, 49));
+        GerenciarQuiz.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         GerenciarQuiz.setForeground(new java.awt.Color(255, 255, 255));
         GerenciarQuiz.setText("Gerenciar Quiz");
         GerenciarQuiz.addActionListener(new java.awt.event.ActionListener() {
@@ -144,7 +148,7 @@ public class ProfTela extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         pack();

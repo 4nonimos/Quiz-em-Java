@@ -34,7 +34,7 @@
                       <Component id="Label" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="149" max="32767" attributes="0"/>
+              <EmptySpace pref="142" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -54,7 +54,7 @@
     <Component class="javax.swing.JLabel" name="Label">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Microsoft JhengHei UI" size="12" style="1"/>
+          <Font name="Microsoft YaHei UI" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Login j&#xe1; existente"/>
       </Properties>
@@ -65,7 +65,7 @@
           <Color blue="31" green="62" red="ff" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Microsoft JhengHei UI" size="12" style="1"/>
+          <Font name="Microsoft YaHei UI" size="12" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>

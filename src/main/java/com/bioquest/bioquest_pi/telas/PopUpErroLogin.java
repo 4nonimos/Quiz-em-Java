@@ -43,7 +43,7 @@ public class PopUpErroLogin extends javax.swing.JFrame {
         });
 
         VoltarLogin.setBackground(new java.awt.Color(255, 49, 49));
-        VoltarLogin.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        VoltarLogin.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         VoltarLogin.setForeground(new java.awt.Color(255, 255, 255));
         VoltarLogin.setText("Voltar");
         VoltarLogin.addActionListener(new java.awt.event.ActionListener() {

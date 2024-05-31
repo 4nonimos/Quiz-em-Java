@@ -36,18 +36,18 @@ public class PopUpConfDeletConta extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Label.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        Label.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         Label.setText("Realmente deseja deletar esta conta ?");
 
         nomecompletoLabel.setText("<NomeCompleto>");
 
-        simButton.setBackground(new java.awt.Color(0, 255, 56));
-        simButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        simButton.setBackground(new java.awt.Color(131, 177, 0));
+        simButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         simButton.setForeground(new java.awt.Color(255, 255, 255));
         simButton.setText("Sim");
 
         naoButton.setBackground(new java.awt.Color(255, 49, 49));
-        naoButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        naoButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         naoButton.setForeground(new java.awt.Color(255, 255, 255));
         naoButton.setText("Não");
 

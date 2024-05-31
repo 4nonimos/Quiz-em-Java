@@ -48,7 +48,7 @@ public class EntrarQuizTela extends javax.swing.JFrame {
         });
 
         voltarButton.setBackground(new java.awt.Color(255, 49, 49));
-        voltarButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        voltarButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         voltarButton.setForeground(new java.awt.Color(255, 255, 255));
         voltarButton.setText("Voltar");
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +58,7 @@ public class EntrarQuizTela extends javax.swing.JFrame {
         });
 
         entrarQuizButton.setBackground(new java.awt.Color(255, 223, 53));
-        entrarQuizButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        entrarQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         entrarQuizButton.setForeground(new java.awt.Color(255, 255, 255));
         entrarQuizButton.setText("Entrar");
         entrarQuizButton.addActionListener(new java.awt.event.ActionListener() {

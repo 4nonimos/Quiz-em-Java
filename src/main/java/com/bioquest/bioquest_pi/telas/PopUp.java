@@ -40,7 +40,7 @@ public class PopUp extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setBackground(new java.awt.Color(255, 49, 49));
-        jButton1.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Voltar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

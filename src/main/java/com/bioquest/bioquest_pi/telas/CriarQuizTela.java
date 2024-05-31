@@ -41,12 +41,12 @@ public class CriarQuizTela extends javax.swing.JFrame {
         addPerguntaButton.setText("adicionar pergunta");
 
         delQuizButton.setBackground(new java.awt.Color(255, 49, 49));
-        delQuizButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        delQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         delQuizButton.setForeground(new java.awt.Color(255, 255, 255));
         delQuizButton.setText("DeletarQuiz");
 
         voltarButton.setBackground(new java.awt.Color(255, 98, 49));
-        voltarButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        voltarButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         voltarButton.setForeground(new java.awt.Color(255, 255, 255));
         voltarButton.setText("Voltar");
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -59,6 +59,9 @@ public class CriarQuizTela extends javax.swing.JFrame {
 
         materiaTextField.setText("Materia");
 
+        criarQuizButton.setBackground(new java.awt.Color(131, 177, 0));
+        criarQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        criarQuizButton.setForeground(new java.awt.Color(255, 255, 255));
         criarQuizButton.setText("Criar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -80,7 +83,7 @@ public class CriarQuizTela extends javax.swing.JFrame {
                             .addComponent(delQuizButton))))
                 .addGap(30, 30, 30)
                 .addComponent(voltarButton)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,7 +92,7 @@ public class CriarQuizTela extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nomeQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(materiaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 182, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addPerguntaButton)
                     .addComponent(delQuizButton)

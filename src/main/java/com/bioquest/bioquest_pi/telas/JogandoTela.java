@@ -214,6 +214,9 @@ public class JogandoTela extends javax.swing.JFrame {
             }
         });
 
+        anteriorButton.setBackground(new java.awt.Color(50, 103, 238));
+        anteriorButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        anteriorButton.setForeground(new java.awt.Color(255, 255, 255));
         anteriorButton.setText("Anterior");
         anteriorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,6 +224,9 @@ public class JogandoTela extends javax.swing.JFrame {
             }
         });
 
+        proximaButton.setBackground(new java.awt.Color(131, 177, 0));
+        proximaButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        proximaButton.setForeground(new java.awt.Color(255, 255, 255));
         proximaButton.setText("Próxima");
         proximaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,6 +234,9 @@ public class JogandoTela extends javax.swing.JFrame {
             }
         });
 
+        finalizarButton.setBackground(new java.awt.Color(255, 49, 49));
+        finalizarButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        finalizarButton.setForeground(new java.awt.Color(255, 255, 255));
         finalizarButton.setText("Finalizar");
         finalizarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
