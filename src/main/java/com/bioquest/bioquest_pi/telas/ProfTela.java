@@ -88,7 +88,7 @@ public class ProfTela extends javax.swing.JFrame {
             }
         });
 
-        bioquestLabel.setText("BIOQUEST FOTO AQUI");
+        bioquestLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo menor.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -123,13 +123,13 @@ public class ProfTela extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(128, 128, 128)
                         .addComponent(bioquestLabel)))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(bioquestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
+                .addComponent(bioquestLabel)
                 .addGap(18, 18, 18)
                 .addComponent(SairLogin)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)

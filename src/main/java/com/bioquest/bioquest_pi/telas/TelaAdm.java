@@ -53,6 +53,9 @@ public class TelaAdm extends javax.swing.JFrame {
             }
         });
 
+        entrarQuizButton.setBackground(new java.awt.Color(0, 255, 56));
+        entrarQuizButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        entrarQuizButton.setForeground(new java.awt.Color(255, 255, 255));
         entrarQuizButton.setText("Entrar Quiz");
         entrarQuizButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +63,9 @@ public class TelaAdm extends javax.swing.JFrame {
             }
         });
 
+        admButton.setBackground(new java.awt.Color(255, 98, 49));
+        admButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        admButton.setForeground(new java.awt.Color(255, 255, 255));
         admButton.setText("Painel ADM");
 
         gerenciarButton.setText("Gerenciar Quiz");
@@ -92,7 +98,7 @@ public class TelaAdm extends javax.swing.JFrame {
 
         play4Button.setText("jogar 4");
 
-        bioquestLabel.setText("BIOQUEST FOTO AQUI");
+        bioquestLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo menor.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,19 +126,19 @@ public class TelaAdm extends javax.swing.JFrame {
                         .addComponent(play3Button)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(play4Button)
-                        .addGap(0, 58, Short.MAX_VALUE)))
+                        .addGap(0, 66, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(163, 163, 163)
+                .addGap(116, 116, 116)
                 .addComponent(bioquestLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(23, 23, 23)
                 .addComponent(bioquestLabel)
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(sairButton)
                 .addGap(2, 2, 2)
                 .addComponent(entrarQuizButton)
@@ -150,7 +156,7 @@ public class TelaAdm extends javax.swing.JFrame {
                     .addComponent(play2Button)
                     .addComponent(play3Button)
                     .addComponent(play4Button))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         pack();

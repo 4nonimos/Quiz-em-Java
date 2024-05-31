@@ -62,6 +62,9 @@ public class TelaProfessor extends javax.swing.JFrame {
             }
         });
 
+        entrarQuizButton.setBackground(new java.awt.Color(0, 255, 56));
+        entrarQuizButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        entrarQuizButton.setForeground(new java.awt.Color(255, 255, 255));
         entrarQuizButton.setText("Entrar Quiz");
         entrarQuizButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,7 +166,7 @@ public class TelaProfessor extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         pack();
