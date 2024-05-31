@@ -57,7 +57,7 @@ public class EntrarQuizTela extends javax.swing.JFrame {
             }
         });
 
-        entrarQuizButton.setBackground(new java.awt.Color(255, 223, 53));
+        entrarQuizButton.setBackground(new java.awt.Color(131, 177, 0));
         entrarQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         entrarQuizButton.setForeground(new java.awt.Color(255, 255, 255));
         entrarQuizButton.setText("Entrar");

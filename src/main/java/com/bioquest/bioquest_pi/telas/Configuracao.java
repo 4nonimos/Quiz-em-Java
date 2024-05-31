@@ -37,9 +37,11 @@ public class Configuracao extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         configLabel.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        configLabel.setForeground(new java.awt.Color(204, 204, 204));
         configLabel.setText("Configurações");
 
         volumeLabel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        volumeLabel.setForeground(new java.awt.Color(204, 204, 204));
         volumeLabel.setText("Volume");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

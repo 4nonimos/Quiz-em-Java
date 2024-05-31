@@ -38,7 +38,7 @@ public class CriarQuizTela extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        addPerguntaButton.setText("adicionar pergunta");
+        addPerguntaButton.setText("Adicionar pergunta");
 
         delQuizButton.setBackground(new java.awt.Color(255, 49, 49));
         delQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
@@ -83,7 +83,7 @@ public class CriarQuizTela extends javax.swing.JFrame {
                             .addComponent(delQuizButton))))
                 .addGap(30, 30, 30)
                 .addComponent(voltarButton)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

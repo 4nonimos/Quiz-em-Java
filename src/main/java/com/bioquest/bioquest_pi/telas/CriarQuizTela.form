@@ -42,7 +42,7 @@
               </Group>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="voltarButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="39" max="32767" attributes="0"/>
+              <EmptySpace pref="37" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -70,7 +70,7 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="addPerguntaButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="adicionar pergunta"/>
+        <Property name="text" type="java.lang.String" value="Adicionar pergunta"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="delQuizButton">
