@@ -42,15 +42,24 @@ public class TelaInicialAluno extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        sairButton.setText("sair");
+        sairButton.setBackground(new java.awt.Color(255, 49, 49));
+        sairButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        sairButton.setForeground(new java.awt.Color(255, 255, 255));
+        sairButton.setText("Sair");
         sairButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sairButtonActionPerformed(evt);
             }
         });
 
+        relatiorioButton.setBackground(new java.awt.Color(255, 98, 49));
+        relatiorioButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        relatiorioButton.setForeground(new java.awt.Color(255, 255, 255));
         relatiorioButton.setText("Relatório");
 
+        configButton.setBackground(new java.awt.Color(50, 103, 238));
+        configButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        configButton.setForeground(new java.awt.Color(255, 255, 255));
         configButton.setText("Configurações");
         configButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +67,9 @@ public class TelaInicialAluno extends javax.swing.JFrame {
             }
         });
 
+        entrarQuizButton.setBackground(new java.awt.Color(0, 255, 56));
+        entrarQuizButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        entrarQuizButton.setForeground(new java.awt.Color(255, 255, 255));
         entrarQuizButton.setText("Entrar Quiz");
         entrarQuizButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,7 +119,7 @@ public class TelaInicialAluno extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(57, 57, 57)
                                 .addComponent(configButton)))
-                        .addGap(0, 38, Short.MAX_VALUE)))
+                        .addGap(0, 29, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -123,7 +135,7 @@ public class TelaInicialAluno extends javax.swing.JFrame {
                 .addComponent(configButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(entrarQuizButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(play1Button)
                     .addComponent(play2Button)

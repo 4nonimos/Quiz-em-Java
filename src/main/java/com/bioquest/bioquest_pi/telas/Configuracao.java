@@ -36,9 +36,11 @@ public class Configuracao extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        configLabel.setText("configuracoes");
+        configLabel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        configLabel.setText("Configurações");
 
-        volumeLabel.setText("volume");
+        volumeLabel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        volumeLabel.setText("Volume");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,7 +72,7 @@ public class Configuracao extends javax.swing.JFrame {
                     .addComponent(volumeLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(volumeSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
 
         pack();

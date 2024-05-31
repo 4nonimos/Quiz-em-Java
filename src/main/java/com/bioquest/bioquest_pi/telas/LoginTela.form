@@ -32,8 +32,8 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="309" pref="309" max="-2" attributes="0"/>
                       <Component id="facaloginLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
-                      <Component id="imagemLabel" min="-2" pref="213" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                      <Component id="imagemLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="373" pref="373" max="-2" attributes="0"/>

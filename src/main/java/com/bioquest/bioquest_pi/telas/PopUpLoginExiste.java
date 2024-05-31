@@ -34,8 +34,12 @@ public class PopUpLoginExiste extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        Label.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
         Label.setText("Login já existente");
 
+        okButton.setBackground(new java.awt.Color(255, 98, 49));
+        okButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        okButton.setForeground(new java.awt.Color(255, 255, 255));
         okButton.setText("Ok");
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,12 +54,12 @@ public class PopUpLoginExiste extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addComponent(Label))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(159, 159, 159)
-                        .addComponent(okButton)))
-                .addContainerGap(157, Short.MAX_VALUE))
+                        .addComponent(okButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(Label)))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -64,7 +68,7 @@ public class PopUpLoginExiste extends javax.swing.JFrame {
                 .addComponent(Label)
                 .addGap(18, 18, 18)
                 .addComponent(okButton)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
         pack();

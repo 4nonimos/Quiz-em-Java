@@ -35,10 +35,17 @@ public class PopUpDeletQuiz extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        Label.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
         Label.setText("Deseja deletar esse quiz ?");
 
+        simButton.setBackground(new java.awt.Color(0, 255, 56));
+        simButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        simButton.setForeground(new java.awt.Color(255, 255, 255));
         simButton.setText("Sim");
 
+        naoButton.setBackground(new java.awt.Color(255, 49, 49));
+        naoButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        naoButton.setForeground(new java.awt.Color(255, 255, 255));
         naoButton.setText("Não");
         naoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,13 +60,13 @@ public class PopUpDeletQuiz extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(135, 135, 135)
-                        .addComponent(Label))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(90, 90, 90)
                         .addComponent(simButton)
                         .addGap(50, 50, 50)
-                        .addComponent(naoButton)))
+                        .addComponent(naoButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(115, 115, 115)
+                        .addComponent(Label)))
                 .addContainerGap(116, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -71,7 +78,7 @@ public class PopUpDeletQuiz extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(simButton)
                     .addComponent(naoButton))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         pack();

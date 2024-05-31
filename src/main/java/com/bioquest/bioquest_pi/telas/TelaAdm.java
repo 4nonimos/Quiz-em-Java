@@ -43,6 +43,9 @@ public class TelaAdm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        sairButton.setBackground(new java.awt.Color(255, 49, 49));
+        sairButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        sairButton.setForeground(new java.awt.Color(255, 255, 255));
         sairButton.setText("Sair");
         sairButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,6 +69,9 @@ public class TelaAdm extends javax.swing.JFrame {
             }
         });
 
+        configButton.setBackground(new java.awt.Color(50, 103, 238));
+        configButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        configButton.setForeground(new java.awt.Color(255, 255, 255));
         configButton.setText("Configurações");
         configButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +79,9 @@ public class TelaAdm extends javax.swing.JFrame {
             }
         });
 
+        rankingButton.setBackground(new java.awt.Color(255, 98, 49));
+        rankingButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        rankingButton.setForeground(new java.awt.Color(255, 255, 255));
         rankingButton.setText("Ver Ranking");
 
         play1Button.setText("jogar 1");
@@ -141,7 +150,7 @@ public class TelaAdm extends javax.swing.JFrame {
                     .addComponent(play2Button)
                     .addComponent(play3Button)
                     .addComponent(play4Button))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();

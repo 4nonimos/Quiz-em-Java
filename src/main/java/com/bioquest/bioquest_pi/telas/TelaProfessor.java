@@ -52,6 +52,9 @@ public class TelaProfessor extends javax.swing.JFrame {
             }
         });
 
+        SairLoginButton.setBackground(new java.awt.Color(255, 49, 49));
+        SairLoginButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        SairLoginButton.setForeground(new java.awt.Color(255, 255, 255));
         SairLoginButton.setText("Sair");
         SairLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,6 +69,9 @@ public class TelaProfessor extends javax.swing.JFrame {
             }
         });
 
+        VerRankingButton.setBackground(new java.awt.Color(255, 98, 49));
+        VerRankingButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        VerRankingButton.setForeground(new java.awt.Color(255, 255, 255));
         VerRankingButton.setText("Ver Ranking");
         VerRankingButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +86,9 @@ public class TelaProfessor extends javax.swing.JFrame {
             }
         });
 
+        IrParaConfigsButton.setBackground(new java.awt.Color(50, 103, 238));
+        IrParaConfigsButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        IrParaConfigsButton.setForeground(new java.awt.Color(255, 255, 255));
         IrParaConfigsButton.setText("Configurações");
         IrParaConfigsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,7 +163,7 @@ public class TelaProfessor extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         pack();

@@ -36,12 +36,19 @@ public class PopUpConfDeletConta extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        Label.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
         Label.setText("Realmente deseja deletar esta conta ?");
 
         nomecompletoLabel.setText("<NomeCompleto>");
 
+        simButton.setBackground(new java.awt.Color(0, 255, 56));
+        simButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        simButton.setForeground(new java.awt.Color(255, 255, 255));
         simButton.setText("Sim");
 
+        naoButton.setBackground(new java.awt.Color(255, 49, 49));
+        naoButton.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 12)); // NOI18N
+        naoButton.setForeground(new java.awt.Color(255, 255, 255));
         naoButton.setText("Não");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -52,17 +59,17 @@ public class PopUpConfDeletConta extends javax.swing.JFrame {
                 .addGap(144, 144, 144)
                 .addComponent(nomecompletoLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(90, 90, 90)
+                        .addComponent(Label)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(simButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
-                        .addComponent(naoButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Label)))
-                .addGap(101, 101, 101))
+                        .addComponent(naoButton)
+                        .addGap(101, 101, 101))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -75,7 +82,7 @@ public class PopUpConfDeletConta extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(simButton)
                     .addComponent(naoButton))
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         pack();
