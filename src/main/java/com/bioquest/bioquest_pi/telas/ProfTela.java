@@ -72,20 +72,24 @@ public class ProfTela extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(255, 223, 53));
+        jButton2.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("jogar 1");
+        jButton2.setText("JOGAR");
 
         jButton3.setBackground(new java.awt.Color(255, 223, 53));
+        jButton3.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("jogar 2");
+        jButton3.setText("JOGAR");
 
         jButton4.setBackground(new java.awt.Color(255, 223, 53));
+        jButton4.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("jogar 3");
+        jButton4.setText("JOGAR");
 
         jButton5.setBackground(new java.awt.Color(255, 223, 53));
+        jButton5.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("jogar 4");
+        jButton5.setText("JOGAR");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -148,7 +152,7 @@ public class ProfTela extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
