@@ -91,13 +91,25 @@ public class TelaAdm extends javax.swing.JFrame {
         rankingButton.setForeground(new java.awt.Color(255, 255, 255));
         rankingButton.setText("Ver Ranking");
 
-        play1Button.setText("jogar 1");
+        play1Button.setBackground(new java.awt.Color(255, 223, 53));
+        play1Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        play1Button.setForeground(new java.awt.Color(255, 255, 255));
+        play1Button.setText("JOGAR");
 
-        play2Button.setText("jogar 2");
+        play2Button.setBackground(new java.awt.Color(255, 223, 53));
+        play2Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        play2Button.setForeground(new java.awt.Color(255, 255, 255));
+        play2Button.setText("JOGAR");
 
-        play3Button.setText("jogar 3");
+        play3Button.setBackground(new java.awt.Color(255, 223, 53));
+        play3Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        play3Button.setForeground(new java.awt.Color(255, 255, 255));
+        play3Button.setText("JOGAR");
 
-        play4Button.setText("jogar 4");
+        play4Button.setBackground(new java.awt.Color(255, 223, 53));
+        play4Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        play4Button.setForeground(new java.awt.Color(255, 255, 255));
+        play4Button.setText("JOGAR");
 
         bioquestLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo menor.png"))); // NOI18N
 
@@ -157,7 +169,7 @@ public class TelaAdm extends javax.swing.JFrame {
                     .addComponent(play2Button)
                     .addComponent(play3Button)
                     .addComponent(play4Button))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         pack();

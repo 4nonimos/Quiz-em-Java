@@ -77,13 +77,25 @@ public class TelaInicialAluno extends javax.swing.JFrame {
             }
         });
 
-        play1Button.setText("jogar1");
+        play1Button.setBackground(new java.awt.Color(255, 223, 53));
+        play1Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        play1Button.setForeground(new java.awt.Color(255, 255, 255));
+        play1Button.setText("JOGAR");
 
-        play2Button.setText("jogar2");
+        play2Button.setBackground(new java.awt.Color(255, 223, 53));
+        play2Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        play2Button.setForeground(new java.awt.Color(255, 255, 255));
+        play2Button.setText("JOGAR");
 
-        play3Button.setText("jogar3");
+        play3Button.setBackground(new java.awt.Color(255, 223, 53));
+        play3Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        play3Button.setForeground(new java.awt.Color(255, 255, 255));
+        play3Button.setText("JOGAR");
 
-        play4Button.setText("jogar4");
+        play4Button.setBackground(new java.awt.Color(255, 223, 53));
+        play4Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        play4Button.setForeground(new java.awt.Color(255, 255, 255));
+        play4Button.setText("JOGAR");
 
         imagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo menor.png"))); // NOI18N
 
@@ -135,7 +147,7 @@ public class TelaInicialAluno extends javax.swing.JFrame {
                 .addComponent(configButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(entrarQuizButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(play1Button)
                     .addComponent(play2Button)
