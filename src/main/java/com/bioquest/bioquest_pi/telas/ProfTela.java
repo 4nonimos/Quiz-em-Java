@@ -66,7 +66,7 @@ public class ProfTela extends javax.swing.JFrame {
             }
         });
 
-        GerenciarQuiz.setBackground(new java.awt.Color(255, 98, 49));
+        GerenciarQuiz.setBackground(new java.awt.Color(115, 56, 240));
         GerenciarQuiz.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         GerenciarQuiz.setForeground(new java.awt.Color(255, 255, 255));
         GerenciarQuiz.setText("Gerenciar Quiz");
@@ -108,26 +108,25 @@ public class ProfTela extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(SairLogin))
-                .addGap(18, 18, 18)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2)
+                            .addComponent(SairLogin))
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton5))
-                    .addComponent(bioquestLabel))
-                .addContainerGap(24, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(GerenciarQuiz)
-                    .addComponent(VerRanking)
-                    .addComponent(jButton1))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton5))
+                            .addComponent(bioquestLabel)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(GerenciarQuiz)
+                        .addComponent(VerRanking)
+                        .addComponent(jButton1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

@@ -67,7 +67,9 @@ public class TelaAdm extends javax.swing.JFrame {
         admButton.setForeground(new java.awt.Color(255, 255, 255));
         admButton.setText("Painel ADM");
 
+        gerenciarButton.setBackground(new java.awt.Color(115, 56, 240));
         gerenciarButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        gerenciarButton.setForeground(new java.awt.Color(255, 255, 255));
         gerenciarButton.setText("Gerenciar Quiz");
         gerenciarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

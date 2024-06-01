@@ -74,7 +74,9 @@ public class TelaProfessor extends javax.swing.JFrame {
             }
         });
 
+        GerenciarQuizButton.setBackground(new java.awt.Color(115, 56, 240));
         GerenciarQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        GerenciarQuizButton.setForeground(new java.awt.Color(255, 255, 255));
         GerenciarQuizButton.setText("Gerenciar Quiz");
         GerenciarQuizButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
