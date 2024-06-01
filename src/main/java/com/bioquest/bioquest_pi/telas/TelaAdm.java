@@ -33,7 +33,6 @@ public class TelaAdm extends javax.swing.JFrame {
         entrarQuizButton = new javax.swing.JButton();
         admButton = new javax.swing.JButton();
         gerenciarButton = new javax.swing.JButton();
-        configButton = new javax.swing.JButton();
         rankingButton = new javax.swing.JButton();
         play1Button = new javax.swing.JButton();
         play2Button = new javax.swing.JButton();
@@ -73,16 +72,6 @@ public class TelaAdm extends javax.swing.JFrame {
         gerenciarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gerenciarButtonActionPerformed(evt);
-            }
-        });
-
-        configButton.setBackground(new java.awt.Color(50, 103, 238));
-        configButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        configButton.setForeground(new java.awt.Color(255, 255, 255));
-        configButton.setText("Configurações");
-        configButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                configButtonActionPerformed(evt);
             }
         });
 
@@ -127,7 +116,6 @@ public class TelaAdm extends javax.swing.JFrame {
                                 .addGap(104, 104, 104))
                             .addComponent(admButton, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(gerenciarButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(configButton, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(entrarQuizButton, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(rankingButton, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(layout.createSequentialGroup()
@@ -159,9 +147,7 @@ public class TelaAdm extends javax.swing.JFrame {
                 .addComponent(admButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(gerenciarButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(configButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(39, 39, 39)
                 .addComponent(rankingButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -181,13 +167,6 @@ public class TelaAdm extends javax.swing.JFrame {
         this.dispose();
         loginTela.setVisible(true);
     }//GEN-LAST:event_sairButtonActionPerformed
-
-    private void configButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configButtonActionPerformed
-        // TODO add your handling code here:
-        Configuracao config = new Configuracao();
-        this.dispose();
-        config.setVisible(true);
-    }//GEN-LAST:event_configButtonActionPerformed
 
     private void entrarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarQuizButtonActionPerformed
         EntrarQuizTela entrarQuiz = new EntrarQuizTela();
@@ -239,7 +218,6 @@ public class TelaAdm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton admButton;
     private javax.swing.JLabel bioquestLabel;
-    private javax.swing.JButton configButton;
     private javax.swing.JButton entrarQuizButton;
     private javax.swing.JButton gerenciarButton;
     private javax.swing.JButton play1Button;

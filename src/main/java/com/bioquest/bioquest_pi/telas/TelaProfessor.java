@@ -36,7 +36,6 @@ public class TelaProfessor extends javax.swing.JFrame {
         entrarQuizButton = new javax.swing.JButton();
         VerRankingButton = new javax.swing.JButton();
         GerenciarQuizButton = new javax.swing.JButton();
-        IrParaConfigsButton = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -83,16 +82,6 @@ public class TelaProfessor extends javax.swing.JFrame {
             }
         });
 
-        IrParaConfigsButton.setBackground(new java.awt.Color(50, 103, 238));
-        IrParaConfigsButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        IrParaConfigsButton.setForeground(new java.awt.Color(255, 255, 255));
-        IrParaConfigsButton.setText("Configurações");
-        IrParaConfigsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IrParaConfigsButtonActionPerformed(evt);
-            }
-        });
-
         jButton2.setBackground(new java.awt.Color(255, 223, 53));
         jButton2.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -136,23 +125,19 @@ public class TelaProfessor extends javax.swing.JFrame {
                         .addComponent(jButton4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton5)
-                        .addContainerGap(12, Short.MAX_VALUE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(SairLoginButton)
-                            .addGap(90, 90, 90))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(entrarQuizButton)
-                            .addContainerGap())
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(VerRankingButton)
-                            .addContainerGap())
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(GerenciarQuizButton)
-                            .addContainerGap())
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(IrParaConfigsButton)
-                            .addContainerGap()))))
+                        .addContainerGap(24, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(SairLoginButton)
+                                .addGap(90, 90, 90))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(entrarQuizButton))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(VerRankingButton))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(GerenciarQuizButton)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,9 +155,7 @@ public class TelaProfessor extends javax.swing.JFrame {
                 .addComponent(VerRankingButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(GerenciarQuizButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(IrParaConfigsButton)
-                .addGap(31, 31, 31)
+                .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton3)
@@ -190,13 +173,6 @@ public class TelaProfessor extends javax.swing.JFrame {
         this.dispose();
         loginTela.setVisible(true);
     }//GEN-LAST:event_SairLoginButtonActionPerformed
-
-    private void IrParaConfigsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IrParaConfigsButtonActionPerformed
-        // TODO add your handling code here:
-        Configuracao config = new Configuracao();
-        this.dispose();
-        config.setVisible(true);
-    }//GEN-LAST:event_IrParaConfigsButtonActionPerformed
 
     private void GerenciarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GerenciarQuizButtonActionPerformed
         CriarQuizTela quizTela = new CriarQuizTela();
@@ -258,7 +234,6 @@ public class TelaProfessor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton GerenciarQuizButton;
-    private javax.swing.JButton IrParaConfigsButton;
     private javax.swing.JButton SairLoginButton;
     private javax.swing.JButton VerRankingButton;
     private javax.swing.JButton entrarQuizButton;

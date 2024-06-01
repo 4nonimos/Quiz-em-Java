@@ -32,7 +32,6 @@ public class TelaInicialAluno extends javax.swing.JFrame {
 
         sairButton = new javax.swing.JButton();
         relatiorioButton = new javax.swing.JButton();
-        configButton = new javax.swing.JButton();
         entrarQuizButton = new javax.swing.JButton();
         play1Button = new javax.swing.JButton();
         play2Button = new javax.swing.JButton();
@@ -56,16 +55,6 @@ public class TelaInicialAluno extends javax.swing.JFrame {
         relatiorioButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         relatiorioButton.setForeground(new java.awt.Color(255, 255, 255));
         relatiorioButton.setText("Relatório");
-
-        configButton.setBackground(new java.awt.Color(50, 103, 238));
-        configButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        configButton.setForeground(new java.awt.Color(255, 255, 255));
-        configButton.setText("Configurações");
-        configButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                configButtonActionPerformed(evt);
-            }
-        });
 
         entrarQuizButton.setBackground(new java.awt.Color(131, 177, 0));
         entrarQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
@@ -124,13 +113,8 @@ public class TelaInicialAluno extends javax.swing.JFrame {
                                 .addComponent(play2Button)
                                 .addGap(18, 18, 18)
                                 .addComponent(play3Button)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(play4Button))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(configButton)))))
+                                .addGap(18, 18, 18)
+                                .addComponent(play4Button)))
                         .addGap(0, 27, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -143,9 +127,7 @@ public class TelaInicialAluno extends javax.swing.JFrame {
                         .addComponent(relatiorioButton)
                         .addComponent(sairButton))
                     .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(configButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(56, 56, 56)
                 .addComponent(entrarQuizButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -165,13 +147,6 @@ public class TelaInicialAluno extends javax.swing.JFrame {
         this.dispose();
         loginTela.setVisible(true);
     }//GEN-LAST:event_sairButtonActionPerformed
-
-    private void configButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configButtonActionPerformed
-        // TODO add your handling code here:
-        Configuracao config = new Configuracao();
-        this.dispose();
-        config.setVisible(true);
-    }//GEN-LAST:event_configButtonActionPerformed
 
     private void entrarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarQuizButtonActionPerformed
         EntrarQuizTela entrarQuiz = new EntrarQuizTela();
@@ -215,7 +190,6 @@ public class TelaInicialAluno extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton configButton;
     private javax.swing.JButton entrarQuizButton;
     private javax.swing.JLabel imagemLabel;
     private javax.swing.JButton play1Button;
