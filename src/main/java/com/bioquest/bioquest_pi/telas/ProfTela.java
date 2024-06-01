@@ -60,6 +60,11 @@ public class ProfTela extends javax.swing.JFrame {
         VerRanking.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         VerRanking.setForeground(new java.awt.Color(255, 255, 255));
         VerRanking.setText("Ver Ranking");
+        VerRanking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VerRankingActionPerformed(evt);
+            }
+        });
 
         GerenciarQuiz.setBackground(new java.awt.Color(255, 98, 49));
         GerenciarQuiz.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
@@ -102,51 +107,43 @@ public class ProfTela extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(SairLogin)
-                        .addGap(90, 90, 90))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(VerRanking)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(GerenciarQuiz)
-                        .addContainerGap())))
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2)
+                    .addComponent(SairLogin))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jButton2)
-                        .addGap(18, 18, 18)
                         .addComponent(jButton3)
                         .addGap(18, 18, 18)
                         .addComponent(jButton4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
-                        .addComponent(bioquestLabel)))
+                    .addComponent(bioquestLabel))
+                .addContainerGap(24, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(GerenciarQuiz)
+                    .addComponent(VerRanking)
+                    .addComponent(jButton1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(bioquestLabel)
-                .addGap(18, 18, 18)
-                .addComponent(SairLogin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bioquestLabel)
+                    .addComponent(SairLogin))
+                .addGap(47, 47, 47)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(VerRanking)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(GerenciarQuiz)
-                .addGap(63, 63, 63)
+                .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton3)
@@ -172,6 +169,10 @@ public class ProfTela extends javax.swing.JFrame {
     private void GerenciarQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GerenciarQuizActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_GerenciarQuizActionPerformed
+
+    private void VerRankingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerRankingActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VerRankingActionPerformed
 
     /**
      * @param args the command line arguments

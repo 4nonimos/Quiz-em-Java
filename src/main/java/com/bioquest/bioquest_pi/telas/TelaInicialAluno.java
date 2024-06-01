@@ -85,6 +85,11 @@ public class TelaInicialAluno extends javax.swing.JFrame {
         play4Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         play4Button.setForeground(new java.awt.Color(255, 255, 255));
         play4Button.setText("JOGAR");
+        play4Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                play4ButtonActionPerformed(evt);
+            }
+        });
 
         imagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo menor.png"))); // NOI18N
 
@@ -93,49 +98,43 @@ public class TelaInicialAluno extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(sairButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(relatiorioButton))
+                .addContainerGap(49, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(relatiorioButton)
+                    .addComponent(entrarQuizButton)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(play1Button)
+                            .addComponent(sairButton))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(326, 326, 326)
-                                .addComponent(entrarQuizButton))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addComponent(play1Button)
-                                .addGap(18, 18, 18)
                                 .addComponent(play2Button)
-                                .addGap(18, 18, 18)
-                                .addComponent(play3Button)
-                                .addGap(18, 18, 18)
-                                .addComponent(play4Button)))
-                        .addGap(0, 27, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(play3Button))
+                            .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
+                        .addComponent(play4Button)))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(relatiorioButton)
-                        .addComponent(sairButton))
-                    .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sairButton))
+                .addGap(9, 9, 9)
+                .addComponent(relatiorioButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(entrarQuizButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGap(72, 72, 72)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(play1Button)
                     .addComponent(play2Button)
                     .addComponent(play3Button)
                     .addComponent(play4Button))
-                .addGap(22, 22, 22))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
@@ -153,6 +152,10 @@ public class TelaInicialAluno extends javax.swing.JFrame {
         this.dispose();
         entrarQuiz.setVisible(true);
     }//GEN-LAST:event_entrarQuizButtonActionPerformed
+
+    private void play4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_play4ButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_play4ButtonActionPerformed
 
     /**
      * @param args the command line arguments

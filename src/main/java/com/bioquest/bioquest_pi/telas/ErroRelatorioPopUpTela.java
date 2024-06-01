@@ -35,6 +35,7 @@ public class ErroRelatorioPopUpTela extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         convidadoLabel.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        convidadoLabel.setForeground(new java.awt.Color(255, 255, 255));
         convidadoLabel.setText("Convidados não tem histórico de relatórios salvo");
 
         voltarButton.setBackground(new java.awt.Color(255, 98, 49));
@@ -48,22 +49,21 @@ public class ErroRelatorioPopUpTela extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(69, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(voltarButton)
-                        .addGap(167, 167, 167))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(convidadoLabel)
-                        .addGap(46, 46, 46))))
+                .addComponent(convidadoLabel)
+                .addContainerGap(46, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(voltarButton)
+                .addGap(167, 167, 167))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(131, 131, 131)
                 .addComponent(convidadoLabel)
-                .addGap(39, 39, 39)
+                .addGap(40, 40, 40)
                 .addComponent(voltarButton)
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         pack();
