@@ -170,7 +170,7 @@ public class TelaRelatorio extends javax.swing.JFrame {
 
     private void voltarInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarInicioActionPerformed
         // TODO add your handling code here:
-        InicioTela inicioTela = new InicioTela();
+        TelaInicialAluno inicioTela = new TelaInicialAluno();
         this.dispose();
         inicioTela.setVisible(true);
         

@@ -33,12 +33,7 @@ public class TelaInicialAluno extends javax.swing.JFrame {
     private void initComponents() {
 
         sairButton = new javax.swing.JButton();
-        relatiorioButton = new javax.swing.JButton();
         entrarQuizButton = new javax.swing.JButton();
-        play1Button = new javax.swing.JButton();
-        play2Button = new javax.swing.JButton();
-        play3Button = new javax.swing.JButton();
-        play4Button = new javax.swing.JButton();
         imagemLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,11 +48,6 @@ public class TelaInicialAluno extends javax.swing.JFrame {
             }
         });
 
-        relatiorioButton.setBackground(new java.awt.Color(255, 98, 49));
-        relatiorioButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        relatiorioButton.setForeground(new java.awt.Color(255, 255, 255));
-        relatiorioButton.setText("Relatório");
-
         entrarQuizButton.setBackground(new java.awt.Color(131, 177, 0));
         entrarQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         entrarQuizButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -68,31 +58,6 @@ public class TelaInicialAluno extends javax.swing.JFrame {
             }
         });
 
-        play1Button.setBackground(new java.awt.Color(255, 223, 53));
-        play1Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        play1Button.setForeground(new java.awt.Color(255, 255, 255));
-        play1Button.setText("JOGAR");
-
-        play2Button.setBackground(new java.awt.Color(255, 223, 53));
-        play2Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        play2Button.setForeground(new java.awt.Color(255, 255, 255));
-        play2Button.setText("JOGAR");
-
-        play3Button.setBackground(new java.awt.Color(255, 223, 53));
-        play3Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        play3Button.setForeground(new java.awt.Color(255, 255, 255));
-        play3Button.setText("JOGAR");
-
-        play4Button.setBackground(new java.awt.Color(255, 223, 53));
-        play4Button.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        play4Button.setForeground(new java.awt.Color(255, 255, 255));
-        play4Button.setText("JOGAR");
-        play4Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                play4ButtonActionPerformed(evt);
-            }
-        });
-
         imagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo menor.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -100,43 +65,26 @@ public class TelaInicialAluno extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(relatiorioButton)
-                    .addComponent(entrarQuizButton)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(play1Button)
-                            .addComponent(sairButton))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(play2Button)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(play3Button))
-                            .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(32, 32, 32)
-                        .addComponent(play4Button)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(entrarQuizButton, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(sairButton, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sairButton))
-                .addGap(9, 9, 9)
-                .addComponent(relatiorioButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(entrarQuizButton)
-                .addGap(72, 72, 72)
+                .addContainerGap(40, Short.MAX_VALUE)
+                .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(play1Button)
-                    .addComponent(play2Button)
-                    .addComponent(play3Button)
-                    .addComponent(play4Button))
-                .addContainerGap(22, Short.MAX_VALUE))
+                    .addComponent(entrarQuizButton, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                    .addComponent(sairButton, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         pack();
@@ -154,10 +102,6 @@ public class TelaInicialAluno extends javax.swing.JFrame {
         this.dispose();
         entrarQuiz.setVisible(true);
     }//GEN-LAST:event_entrarQuizButtonActionPerformed
-
-    private void play4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_play4ButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_play4ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,11 +141,6 @@ public class TelaInicialAluno extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton entrarQuizButton;
     private javax.swing.JLabel imagemLabel;
-    private javax.swing.JButton play1Button;
-    private javax.swing.JButton play2Button;
-    private javax.swing.JButton play3Button;
-    private javax.swing.JButton play4Button;
-    private javax.swing.JButton relatiorioButton;
     private javax.swing.JButton sairButton;
     // End of variables declaration//GEN-END:variables
 }
