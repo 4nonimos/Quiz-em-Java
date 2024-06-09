@@ -302,6 +302,7 @@ public class JogandoTela extends javax.swing.JFrame {
     private void finalizarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarButtonActionPerformed
         TelaRelatorio relat = new TelaRelatorio(pontuacao, pont_total,System.nanoTime() - startTime,respo_selec,num_questao);
         relat.setVisible(true);
+        this.dispose();
         
     }//GEN-LAST:event_finalizarButtonActionPerformed
 
