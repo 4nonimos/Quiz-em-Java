@@ -150,7 +150,7 @@ public class TelaInicialAluno extends javax.swing.JFrame {
     }//GEN-LAST:event_sairButtonActionPerformed
 
     private void entrarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarQuizButtonActionPerformed
-        old_EntrarQuizTela entrarQuiz = new old_EntrarQuizTela();
+        EntrarQuizTela entrarQuiz = new EntrarQuizTela();
         this.dispose();
         entrarQuiz.setVisible(true);
     }//GEN-LAST:event_entrarQuizButtonActionPerformed
