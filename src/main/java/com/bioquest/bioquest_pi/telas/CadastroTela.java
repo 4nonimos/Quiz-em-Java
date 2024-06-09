@@ -7,11 +7,12 @@ package com.bioquest.bioquest_pi.telas;
 import com.bioquest.bioquest_pi.bd.UsuarioCAD;
 import com.bioquest.bioquest_pi.modelo.Usuario;
 import java.awt.Color;
-
+import javax.swing.JFrame;
 /**
  *
  * @author Thamires
  */
+import javax.swing.JFrame;
 public class CadastroTela extends javax.swing.JFrame {
 
     /**
@@ -21,6 +22,7 @@ public class CadastroTela extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         getContentPane().setBackground(Color.BLACK);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**

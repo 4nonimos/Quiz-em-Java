@@ -6,6 +6,7 @@ package com.bioquest.bioquest_pi.telas;
 
 import com.bioquest.bioquest_pi.modelo.Usuario;
 import java.awt.Color;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,6 +22,7 @@ public class TelaProfessor extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         getContentPane().setBackground(Color.BLACK);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**

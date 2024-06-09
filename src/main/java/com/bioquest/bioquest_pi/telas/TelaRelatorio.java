@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -27,6 +28,7 @@ public class TelaRelatorio extends javax.swing.JFrame {
      */
     public TelaRelatorio(int pontuacao, int pont_total, long tempTotal, String respo_selec, int num_questao) {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         getContentPane().setBackground(Color.BLACK);
         setLocationRelativeTo(null);
         pontosLabel.setText("Seus pontos: " + pontuacao);

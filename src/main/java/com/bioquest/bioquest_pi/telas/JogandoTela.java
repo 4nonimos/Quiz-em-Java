@@ -21,6 +21,7 @@ import java.util.Vector;
 
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
@@ -48,6 +49,7 @@ public class JogandoTela extends javax.swing.JFrame {
     public JogandoTela() {
         getContentPane().setBackground(Color.BLACK);
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
         quest_resp = new ArrayList();
         

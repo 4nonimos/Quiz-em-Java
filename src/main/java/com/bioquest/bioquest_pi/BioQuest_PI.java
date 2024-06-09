@@ -4,13 +4,16 @@
 
 package com.bioquest.bioquest_pi;
 
-/**
- *
- * @author Thamires
- */
+import com.bioquest.bioquest_pi.telas.LoginTela;
+
 public class BioQuest_PI {
 
     public static void main(String[] args) {
-        System.out.println("Hello Wor ald!");
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new LoginTela().setVisible(true);
+            }
+        });
     }
 }

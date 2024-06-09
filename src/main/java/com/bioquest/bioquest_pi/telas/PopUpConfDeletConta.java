@@ -5,6 +5,7 @@
 package com.bioquest.bioquest_pi.telas;
 
 import java.awt.Color;
+import javax.swing.JFrame;
 
 /**
  *
@@ -18,6 +19,7 @@ public class PopUpConfDeletConta extends javax.swing.JFrame {
     public PopUpConfDeletConta() {
         initComponents();
         getContentPane().setBackground(Color.BLACK);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**

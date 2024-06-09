@@ -29,7 +29,7 @@ public class InfoRanking extends javax.swing.JFrame {
         super("Alunos por Usuario");
         initComponents();
         setLocationRelativeTo(null);
-        
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         // Fetch users from the database
         this.users = getAllUsers();
 

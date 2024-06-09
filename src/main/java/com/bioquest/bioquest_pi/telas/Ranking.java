@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -23,6 +24,7 @@ public class Ranking extends javax.swing.JFrame {
     public Ranking() {
         initComponents();
         getContentPane().setBackground(Color.BLACK);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
