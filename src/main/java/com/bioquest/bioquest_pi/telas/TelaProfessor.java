@@ -44,7 +44,7 @@ public class TelaProfessor extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        SairLoginButton.setBackground(new java.awt.Color(255, 49, 49));
+        SairLoginButton.setBackground(new java.awt.Color(255, 62, 86));
         SairLoginButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         SairLoginButton.setForeground(new java.awt.Color(255, 255, 255));
         SairLoginButton.setText("Sair");
