@@ -8,6 +8,7 @@ import com.bioquest.bioquest_pi.bd.ConnectionFactory;
 import com.bioquest.bioquest_pi.bd.SalaDAO;
 import com.bioquest.bioquest_pi.modelo.Sala;
 import com.bioquest.bioquest_pi.modelo.Usuario;
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -30,6 +31,7 @@ public class InfoRanking extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setExtendedState(JFrame.MAXIMIZED_BOTH);
+        getContentPane().setBackground(Color.BLACK);
         // Fetch users from the database
         this.users = getAllUsers();
 
@@ -46,7 +48,7 @@ public class InfoRanking extends javax.swing.JFrame {
 
         Sala sala = new Sala();
         SalaDAO dao = new SalaDAO();
-        idQuizTextField.setText(Integer.toString(sala.getIdquiz()));
+        //idQuizTextField.setText(Integer.toString(sala.getIdquiz()));
     }
 
     // The getAllUsers method from above
@@ -84,21 +86,10 @@ public class InfoRanking extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        idQuizTextField = new javax.swing.JTextField();
-        nomeQuizTextField = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         alunosTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        idQuizTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "id quiz"));
-        idQuizTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idQuizTextFieldActionPerformed(evt);
-            }
-        });
-
-        nomeQuizTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "nome quiz"));
 
         alunosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -118,35 +109,20 @@ public class InfoRanking extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(101, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(257, Short.MAX_VALUE)
-                        .addComponent(idQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(nomeQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(101, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(124, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(idQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nomeQuizTextField))
-                .addGap(18, 18, 18)
+                .addContainerGap(63, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(59, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void idQuizTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idQuizTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idQuizTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -184,8 +160,6 @@ public class InfoRanking extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable alunosTable;
-    private javax.swing.JTextField idQuizTextField;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nomeQuizTextField;
     // End of variables declaration//GEN-END:variables
 }

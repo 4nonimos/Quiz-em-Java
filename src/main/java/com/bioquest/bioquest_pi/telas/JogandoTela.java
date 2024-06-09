@@ -169,7 +169,6 @@ public class JogandoTela extends javax.swing.JFrame {
         anteriorButton = new javax.swing.JButton();
         proximaButton = new javax.swing.JButton();
         finalizarButton = new javax.swing.JButton();
-        fetchButton = new javax.swing.JButton();
         nameLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -243,13 +242,6 @@ public class JogandoTela extends javax.swing.JFrame {
             }
         });
 
-        fetchButton.setText("fetch");
-        fetchButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fetchButtonActionPerformed(evt);
-            }
-        });
-
         nameLabel.setBackground(new java.awt.Color(34,34,47));
         nameLabel.setForeground(new java.awt.Color(255, 255, 255));
         nameLabel.setText("Name Here");
@@ -269,9 +261,7 @@ public class JogandoTela extends javax.swing.JFrame {
                             .addComponent(respostaAButton, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(respostaBButton, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fetchButton)
-                            .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 804, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 804, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(28, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(35, 35, 35)
@@ -287,9 +277,7 @@ public class JogandoTela extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(fetchButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(35, 35, 35)
                 .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -326,10 +314,6 @@ public class JogandoTela extends javax.swing.JFrame {
         fetch();
                 
     }//GEN-LAST:event_proximaButtonActionPerformed
-
-    private void fetchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fetchButtonActionPerformed
-        System.out.println(pontuacao);
-    }//GEN-LAST:event_fetchButtonActionPerformed
 
     private void respostaAButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respostaAButtonActionPerformed
         quest_resp.add(num_questao);
@@ -428,7 +412,6 @@ public class JogandoTela extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton anteriorButton;
-    private javax.swing.JButton fetchButton;
     private javax.swing.JButton finalizarButton;
     private javax.swing.JLabel nameLabel;
     private javax.swing.JButton proximaButton;
