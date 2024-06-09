@@ -4,8 +4,12 @@
  */
 package com.bioquest.bioquest_pi.telas;
 
+import com.bioquest.bioquest_pi.bd.QuestoesCAD;
+import com.bioquest.bioquest_pi.bd.UsuarioCAD;
+import com.bioquest.bioquest_pi.modelo.Questoes;
+import com.bioquest.bioquest_pi.modelo.Sala;
+import com.bioquest.bioquest_pi.modelo.Usuario;
 import java.awt.Color;
-import javax.swing.JFrame;
 
 /**
  *
@@ -19,7 +23,6 @@ public class CriarQuizTela extends javax.swing.JFrame {
     public CriarQuizTela() {
         initComponents();
         getContentPane().setBackground(Color.BLACK);
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -32,24 +35,32 @@ public class CriarQuizTela extends javax.swing.JFrame {
     private void initComponents() {
 
         addPerguntaButton = new javax.swing.JButton();
-        delQuizButton = new javax.swing.JButton();
         voltarButton = new javax.swing.JButton();
         nomeQuizTextField = new javax.swing.JTextField();
         materiaTextField = new javax.swing.JTextField();
-        criarQuizButton = new javax.swing.JButton();
+        perguntaTextField = new javax.swing.JTextField();
+        altATextField = new javax.swing.JTextField();
+        altBTextField = new javax.swing.JTextField();
+        altCTextField = new javax.swing.JTextField();
+        altDTextField = new javax.swing.JTextField();
+        numQuestaoTextField = new javax.swing.JTextField();
+        altCorretaTextField = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        idQuizTextField = new javax.swing.JTextField();
+        idSalaTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        addPerguntaButton.setText("Adicionar pergunta");
-
-        delQuizButton.setBackground(new java.awt.Color(255, 49, 49));
-        delQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        delQuizButton.setForeground(new java.awt.Color(255, 255, 255));
-        delQuizButton.setText("DeletarQuiz");
+        addPerguntaButton.setBackground(new java.awt.Color(131, 177, 0));
+        addPerguntaButton.setText("adicionar pergunta");
+        addPerguntaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPerguntaButtonActionPerformed(evt);
+            }
+        });
 
         voltarButton.setBackground(new java.awt.Color(255, 98, 49));
-        voltarButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        voltarButton.setForeground(new java.awt.Color(255, 255, 255));
         voltarButton.setText("Voltar");
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,59 +68,138 @@ public class CriarQuizTela extends javax.swing.JFrame {
             }
         });
 
-        nomeQuizTextField.setText("Nome do Quiz");
+        nomeQuizTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Nome do Quiz:"));
+        nomeQuizTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeQuizTextFieldActionPerformed(evt);
+            }
+        });
 
-        materiaTextField.setText("Materia");
+        materiaTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Matéria:"));
 
-        criarQuizButton.setBackground(new java.awt.Color(131, 177, 0));
-        criarQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        criarQuizButton.setForeground(new java.awt.Color(255, 255, 255));
-        criarQuizButton.setText("Criar");
+        perguntaTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Adicione o Texto da Pergunta:"));
+
+        altATextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Adicione o Texto da alternativa A:"));
+
+        altBTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Adicione o Texto da Alternativa B:"));
+
+        altCTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Adicione o Texto da Alternativa C:"));
+
+        altDTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Adicionar Texto da Alternativa D:"));
+
+        numQuestaoTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Número da Questão:"));
+
+        altCorretaTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Alternativa Correta:"));
+
+        jTextPane1.setEditable(false);
+        jTextPane1.setText("Apenas qual alternativa (ex: A)");
+        jScrollPane1.setViewportView(jTextPane1);
+        jTextPane1.getAccessibleContext().setAccessibleName("");
+
+        idQuizTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("ID do Quiz:"));
+
+        idSalaTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("ID da Sala:"));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(nomeQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(materiaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(addPerguntaButton)
-                        .addGap(18, 18, 18)
+                        .addGap(74, 74, 74)
+                        .addComponent(voltarButton))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(nomeQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(94, 94, 94)
+                                .addComponent(materiaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(perguntaTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(numQuestaoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(117, 117, 117)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(altCorretaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(criarQuizButton)
-                            .addComponent(delQuizButton))))
-                .addGap(30, 30, 30)
-                .addComponent(voltarButton)
-                .addContainerGap(37, Short.MAX_VALUE))
+                            .addComponent(altDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(altATextField, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(altBTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(altCTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(idQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(idSalaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(34, 34, 34))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(materiaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 182, Short.MAX_VALUE)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(nomeQuizTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                    .addComponent(materiaTextField)
+                    .addComponent(idQuizTextField)
+                    .addComponent(idSalaTextField))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(perguntaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(numQuestaoTextField)
+                            .addComponent(altCorretaTextField))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(100, 100, 100))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(altATextField, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(altBTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(altCTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(altDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(108, 108, 108)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addPerguntaButton)
-                    .addComponent(delQuizButton)
                     .addComponent(voltarButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(criarQuizButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(40, 40, 40))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
-        // TODO add your handling code here:
+        TelaProfessor telap = new TelaProfessor();
+        this.dispose();
+        telap.setVisible(true);
     }//GEN-LAST:event_voltarButtonActionPerformed
+
+    private void nomeQuizTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeQuizTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeQuizTextFieldActionPerformed
+
+    private void addPerguntaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPerguntaButtonActionPerformed
+        Questoes q = new Questoes();
+        q.setIdquestoes(Integer.parseInt(numQuestaoTextField.getText()));
+        q.setPergunta(perguntaTextField.getText());
+        q.setAlt_a(altATextField.getText());
+        q.setAlt_b(altBTextField.getText());
+        q.setAlt_c(altCTextField.getText());
+        q.setAlt_d(altDTextField.getText());
+        q.setAlt_correta(altCorretaTextField.getText());
+        q.setIdquiz(Integer.parseInt(idQuizTextField.getText()));
+        QuestoesCAD cad = new QuestoesCAD();
+        cad.inserir(q);
+        LoginTela loginTela = new LoginTela();
+        this.dispose();
+        loginTela.setVisible(true);
+    }//GEN-LAST:event_addPerguntaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,10 +238,19 @@ public class CriarQuizTela extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addPerguntaButton;
-    private javax.swing.JButton criarQuizButton;
-    private javax.swing.JButton delQuizButton;
+    private javax.swing.JTextField altATextField;
+    private javax.swing.JTextField altBTextField;
+    private javax.swing.JTextField altCTextField;
+    private javax.swing.JTextField altCorretaTextField;
+    private javax.swing.JTextField altDTextField;
+    private javax.swing.JTextField idQuizTextField;
+    private javax.swing.JTextField idSalaTextField;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextField materiaTextField;
     private javax.swing.JTextField nomeQuizTextField;
+    private javax.swing.JTextField numQuestaoTextField;
+    private javax.swing.JTextField perguntaTextField;
     private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables
 }
