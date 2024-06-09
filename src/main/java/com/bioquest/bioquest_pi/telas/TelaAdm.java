@@ -167,7 +167,7 @@ public class TelaAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_sairButtonActionPerformed
 
     private void entrarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarQuizButtonActionPerformed
-        EntrarQuizTela entrarQuiz = new EntrarQuizTela();
+        old_EntrarQuizTela entrarQuiz = new old_EntrarQuizTela();
         this.dispose();
         entrarQuiz.setVisible(true);
     }//GEN-LAST:event_entrarQuizButtonActionPerformed

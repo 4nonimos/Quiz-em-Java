@@ -7,7 +7,6 @@ package com.bioquest.bioquest_pi.telas;
 import com.bioquest.bioquest_pi.bd.SalaDAO;
 import com.bioquest.bioquest_pi.modelo.Sala;
 import java.awt.Color;
-import static java.lang.Integer.parseInt;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -15,17 +14,16 @@ import javax.swing.JOptionPane;
  *
  * @author Thamires
  */
-public class EntrarQuizTela extends javax.swing.JFrame {
-    //private int idquiz;
+public class old_EntrarQuizTela extends javax.swing.JFrame {
 
     /**
      * Creates new form EntrarQuizTela
      */
-    public EntrarQuizTela() {
+    public old_EntrarQuizTela() {
         initComponents();
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
         getContentPane().setBackground(Color.BLACK);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -40,15 +38,10 @@ public class EntrarQuizTela extends javax.swing.JFrame {
         idQuizTextField = new javax.swing.JTextField();
         voltarButton = new javax.swing.JButton();
         entrarQuizButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         idQuizTextField.setBackground(new java.awt.Color(39, 42, 50));
-        idQuizTextField.setForeground(new java.awt.Color(255, 255, 255));
         idQuizTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "Insira o Id", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(62, 67, 82))); // NOI18N
         idQuizTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,7 +50,9 @@ public class EntrarQuizTela extends javax.swing.JFrame {
         });
 
         voltarButton.setBackground(new java.awt.Color(255, 49, 49));
-        voltarButton.setText("voltar");
+        voltarButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        voltarButton.setForeground(new java.awt.Color(255, 255, 255));
+        voltarButton.setText("Voltar");
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 voltarButtonActionPerformed(evt);
@@ -65,75 +60,46 @@ public class EntrarQuizTela extends javax.swing.JFrame {
         });
 
         entrarQuizButton.setBackground(new java.awt.Color(131, 177, 0));
-        entrarQuizButton.setText("entrar");
+        entrarQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        entrarQuizButton.setForeground(new java.awt.Color(255, 255, 255));
+        entrarQuizButton.setText("Entrar");
         entrarQuizButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 entrarQuizButtonActionPerformed(evt);
             }
         });
 
-        jLabel1.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel1.setText(" ID = 3 para o quiz fácil ");
-        jLabel1.setOpaque(true);
-
-        jLabel2.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel2.setText(" ID = 4 para o quiz normal ");
-        jLabel2.setOpaque(true);
-
-        jLabel3.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel3.setText("Id = 5 para o quiz médio");
-        jLabel3.setOpaque(true);
-
-        jLabel4.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel4.setText("Id = 6 para o quiz difícil");
-        jLabel4.setOpaque(true);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(voltarButton)
                         .addGap(192, 192, 192)
                         .addComponent(entrarQuizButton))
-                    .addComponent(idQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addContainerGap(58, Short.MAX_VALUE))
+                    .addComponent(idQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
+                .addContainerGap(125, Short.MAX_VALUE)
                 .addComponent(idQuizTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63)
+                .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(entrarQuizButton)
                     .addComponent(voltarButton))
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
-
-        jLabel3.getAccessibleContext().setAccessibleName(" ID = 5 para o quiz médio ");
-        jLabel4.getAccessibleContext().setAccessibleName(" ID = 6 para o quiz difícil ");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void idQuizTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idQuizTextFieldActionPerformed
-        
+        // TODO add your handling code here:
     }//GEN-LAST:event_idQuizTextFieldActionPerformed
 
     private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
@@ -150,8 +116,7 @@ public class EntrarQuizTela extends javax.swing.JFrame {
             s.setIdsala(idsalaint);
             SalaDAO dao = new SalaDAO();
             if(dao.existe(s)){
-                int idquiz = parseInt(idQuizTextField.getText());
-                JogandoTela jogaTela = new JogandoTela(idquiz);
+                old_JogandoTela jogaTela = new old_JogandoTela();
                 this.dispose();
                 jogaTela.setVisible(true);
             }
@@ -181,20 +146,21 @@ public class EntrarQuizTela extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EntrarQuizTela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(old_EntrarQuizTela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EntrarQuizTela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(old_EntrarQuizTela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EntrarQuizTela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(old_EntrarQuizTela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EntrarQuizTela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(old_EntrarQuizTela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EntrarQuizTela().setVisible(true);
+                new old_EntrarQuizTela().setVisible(true);
             }
         });
     }
@@ -202,10 +168,6 @@ public class EntrarQuizTela extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton entrarQuizButton;
     private javax.swing.JTextField idQuizTextField;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables
 }

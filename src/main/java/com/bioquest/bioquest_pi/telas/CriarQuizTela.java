@@ -10,6 +10,7 @@ import com.bioquest.bioquest_pi.modelo.Questoes;
 import com.bioquest.bioquest_pi.modelo.Sala;
 import com.bioquest.bioquest_pi.modelo.Usuario;
 import java.awt.Color;
+import javax.swing.JFrame;
 
 /**
  *
@@ -22,6 +23,7 @@ public class CriarQuizTela extends javax.swing.JFrame {
      */
     public CriarQuizTela() {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         getContentPane().setBackground(Color.BLACK);
     }
 

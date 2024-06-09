@@ -176,7 +176,7 @@ public class TelaProfessor extends javax.swing.JFrame {
     }//GEN-LAST:event_GerenciarQuizButtonActionPerformed
 
     private void entrarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarQuizButtonActionPerformed
-        EntrarQuizTela entrarTela = new EntrarQuizTela();
+        old_EntrarQuizTela entrarTela = new old_EntrarQuizTela();
         this.dispose();
         entrarTela.setVisible(true);
     }//GEN-LAST:event_entrarQuizButtonActionPerformed
