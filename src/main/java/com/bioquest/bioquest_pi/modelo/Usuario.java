@@ -89,7 +89,7 @@ public class Usuario {
     }
     public List<Usuario> getAllUsers() {
     List<Usuario> users = new ArrayList<>();
-    String sql = "SELECT * FROM cadastro_db";
+    String sql = "SELECT * FROM cadastro_db WHERE cargo = 'ALUNO'";
     try (Connection conexao = new ConnectionFactory().obterConexao();
          PreparedStatement ps = conexao.prepareStatement(sql);
          ResultSet rs = ps.executeQuery()) {
