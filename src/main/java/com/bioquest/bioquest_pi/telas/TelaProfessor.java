@@ -35,13 +35,8 @@ public class TelaProfessor extends javax.swing.JFrame {
     private void initComponents() {
 
         SairLoginButton = new javax.swing.JButton();
-        entrarQuizButton = new javax.swing.JButton();
         VerRankingButton = new javax.swing.JButton();
         GerenciarQuizButton = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         imagemLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,16 +48,6 @@ public class TelaProfessor extends javax.swing.JFrame {
         SairLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SairLoginButtonActionPerformed(evt);
-            }
-        });
-
-        entrarQuizButton.setBackground(new java.awt.Color(131, 177, 0));
-        entrarQuizButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        entrarQuizButton.setForeground(new java.awt.Color(255, 255, 255));
-        entrarQuizButton.setText("Entrar Quiz");
-        entrarQuizButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                entrarQuizButtonActionPerformed(evt);
             }
         });
 
@@ -86,26 +71,6 @@ public class TelaProfessor extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 223, 53));
-        jButton2.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("JOGAR");
-
-        jButton3.setBackground(new java.awt.Color(255, 223, 53));
-        jButton3.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("JOGAR");
-
-        jButton4.setBackground(new java.awt.Color(255, 223, 53));
-        jButton4.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("JOGAR");
-
-        jButton5.setBackground(new java.awt.Color(255, 223, 53));
-        jButton5.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("JOGAR");
-
         imagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo menor.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -113,50 +78,32 @@ public class TelaProfessor extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3)
-                        .addGap(79, 79, 79)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(VerRankingButton)
-                            .addComponent(GerenciarQuizButton)
-                            .addComponent(entrarQuizButton)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton4)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton5))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(imagemLabel)
-                        .addGap(83, 83, 83)
-                        .addComponent(SairLoginButton)))
-                .addGap(0, 41, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(imagemLabel)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(221, Short.MAX_VALUE)
+                .addComponent(SairLoginButton)
+                .addGap(0, 221, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(197, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(GerenciarQuizButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(VerRankingButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 197, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(SairLoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(entrarQuizButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(imagemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                 .addComponent(VerRankingButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(GerenciarQuizButton)
-                .addGap(63, 63, 63)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(SairLoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51))
         );
 
         pack();
@@ -174,12 +121,6 @@ public class TelaProfessor extends javax.swing.JFrame {
         this.dispose();
         quizTela.setVisible(true);
     }//GEN-LAST:event_GerenciarQuizButtonActionPerformed
-
-    private void entrarQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarQuizButtonActionPerformed
-        old_EntrarQuizTela entrarTela = new old_EntrarQuizTela();
-        this.dispose();
-        entrarTela.setVisible(true);
-    }//GEN-LAST:event_entrarQuizButtonActionPerformed
 
     private void VerRankingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerRankingButtonActionPerformed
         String idQuiz;
@@ -231,11 +172,6 @@ public class TelaProfessor extends javax.swing.JFrame {
     private javax.swing.JButton GerenciarQuizButton;
     private javax.swing.JButton SairLoginButton;
     private javax.swing.JButton VerRankingButton;
-    private javax.swing.JButton entrarQuizButton;
     private javax.swing.JLabel imagemLabel;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     // End of variables declaration//GEN-END:variables
 }

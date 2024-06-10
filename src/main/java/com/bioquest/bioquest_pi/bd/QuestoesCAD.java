@@ -27,10 +27,10 @@ public class QuestoesCAD {
         ps.setString(2, q.getPergunta());
         ps.setString(3, q.getAlt_a());
         ps.setString(4, q.getAlt_b());
-        ps.setString(4, q.getAlt_c());
-        ps.setString(4, q.getAlt_d());
-        ps.setString(4, q.getAlt_correta());
-        ps.setInt(4, q.getIdquiz());
+        ps.setString(5, q.getAlt_c());
+        ps.setString(6, q.getAlt_d());
+        ps.setString(7, q.getAlt_correta());
+        ps.setInt(8, q.getIdquiz());
         //5: Executa o comando
         ps.execute();
     }

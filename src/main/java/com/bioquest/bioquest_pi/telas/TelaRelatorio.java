@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  * @author Matheus
  */
 public class TelaRelatorio extends javax.swing.JFrame {
-    private int idquiz = 1;
+    private int idquiz;
     private int pontuacao;
     private String nome_quiz;
     private String resposta;
@@ -26,8 +26,9 @@ public class TelaRelatorio extends javax.swing.JFrame {
     /**
      * Creates new form Relatorio
      */
-    public TelaRelatorio(int pontuacao, int pont_total, long tempTotal, String respo_selec, int num_questao) {
+    public TelaRelatorio(int pontuacao, int pont_total, long tempTotal, String respo_selec, int num_questao, int idquiz) {
         initComponents();
+        this.idquiz = idquiz;
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         getContentPane().setBackground(Color.BLACK);
         setLocationRelativeTo(null);
@@ -81,8 +82,6 @@ public class TelaRelatorio extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollBar1 = new javax.swing.JScrollBar();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        meusRelatorios = new javax.swing.JTextArea();
         voltarInicio = new javax.swing.JButton();
         pontosMaxLabel = new javax.swing.JLabel();
         pontosLabel = new javax.swing.JLabel();
@@ -91,11 +90,6 @@ public class TelaRelatorio extends javax.swing.JFrame {
         tempoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        meusRelatorios.setColumns(20);
-        meusRelatorios.setRows(5);
-        meusRelatorios.setText("Meus Relatórios");
-        jScrollPane7.setViewportView(meusRelatorios);
 
         voltarInicio.setText("Voltar Para o Inicio");
         voltarInicio.addActionListener(new java.awt.event.ActionListener() {
@@ -130,12 +124,9 @@ public class TelaRelatorio extends javax.swing.JFrame {
                         .addComponent(nomeQuizLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(90, 90, 90)
                         .addComponent(materiaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pontosMaxLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pontosLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(pontosMaxLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pontosLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(196, 196, 196)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tempoLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -157,7 +148,6 @@ public class TelaRelatorio extends javax.swing.JFrame {
                         .addGap(264, 264, 264)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(voltarInicio, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addComponent(pontosLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pontosMaxLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -207,16 +197,14 @@ public class TelaRelatorio extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaRelatorio(0,0,0,null,0).setVisible(true);
+                new TelaRelatorio(0,0,0,null,0,0).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollBar jScrollBar1;
-    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JLabel materiaLabel;
-    private javax.swing.JTextArea meusRelatorios;
     private javax.swing.JLabel nomeQuizLabel;
     private javax.swing.JLabel pontosLabel;
     private javax.swing.JLabel pontosMaxLabel;

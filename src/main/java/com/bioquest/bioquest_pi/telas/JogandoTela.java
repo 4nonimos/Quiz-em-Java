@@ -89,7 +89,7 @@ public class JogandoTela extends javax.swing.JFrame {
                 String respostad = rs.getString("alt_d");
                 respostaDButton.setText(respostad);
             } else {
-                nameLabel.setText("No name found");
+                nameLabel.setText("Você acabou o quiz, aperto o botão Finalizar");
             }
              try(PreparedStatement psTotal = connection.prepareStatement(totalsql);
                     ResultSet rsTotal = psTotal.executeQuery()){
@@ -177,6 +177,9 @@ public class JogandoTela extends javax.swing.JFrame {
         respostaDButton.setBackground(new java.awt.Color(34, 34, 47));
         respostaDButton.setForeground(new java.awt.Color(255, 255, 255));
         respostaDButton.setText("Resposta D");
+        respostaDButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        respostaDButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        respostaDButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         respostaDButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 respostaDButtonActionPerformed(evt);
@@ -187,6 +190,9 @@ public class JogandoTela extends javax.swing.JFrame {
         respostaAButton.setForeground(new java.awt.Color(255, 255, 255));
         respostaAButton.setText("Resposta A");
         respostaAButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        respostaAButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        respostaAButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        respostaAButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         respostaAButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 respostaAButtonMouseClicked(evt);
@@ -201,6 +207,9 @@ public class JogandoTela extends javax.swing.JFrame {
         respostaCButton.setBackground(new java.awt.Color(34, 34, 47));
         respostaCButton.setForeground(new java.awt.Color(255, 255, 255));
         respostaCButton.setText("Resposta C");
+        respostaCButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        respostaCButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        respostaCButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         respostaCButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 respostaCButtonActionPerformed(evt);
@@ -210,6 +219,9 @@ public class JogandoTela extends javax.swing.JFrame {
         respostaBButton.setBackground(new java.awt.Color(34, 34, 47));
         respostaBButton.setForeground(new java.awt.Color(255, 255, 255));
         respostaBButton.setText("Resposta B");
+        respostaBButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        respostaBButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        respostaBButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         respostaBButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 respostaBButtonActionPerformed(evt);
@@ -244,6 +256,7 @@ public class JogandoTela extends javax.swing.JFrame {
         });
 
         nameLabel.setBackground(new java.awt.Color(34,34,47));
+        nameLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         nameLabel.setForeground(new java.awt.Color(255, 255, 255));
         nameLabel.setText("Name Here");
         nameLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -254,45 +267,48 @@ public class JogandoTela extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(60, 60, 60)
+                .addComponent(anteriorButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81)
+                .addComponent(proximaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(finalizarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(respostaAButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(respostaCButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(anteriorButton)
-                                .addGap(7, 7, 7)
-                                .addComponent(proximaButton))
-                            .addComponent(respostaAButton, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(respostaCButton, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(respostaDButton, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(finalizarButton)
-                            .addComponent(respostaBButton, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(35, 35, 35))
+                        .addComponent(respostaBButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(8, 8, 8))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(respostaDButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(nameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
-                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(respostaCButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(respostaDButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(77, 77, 77))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(respostaAButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(respostaBButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(94, 189, Short.MAX_VALUE)))
+                .addGap(95, 95, 95)
+                .addComponent(nameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(respostaAButton, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                    .addComponent(respostaBButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(respostaDButton, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                    .addComponent(respostaCButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(anteriorButton)
-                    .addComponent(proximaButton)
-                    .addComponent(finalizarButton))
+                    .addComponent(finalizarButton, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(anteriorButton, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(proximaButton, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -300,8 +316,8 @@ public class JogandoTela extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void finalizarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarButtonActionPerformed
-        TelaRelatorio relat = new TelaRelatorio(pontuacao, pont_total,System.nanoTime() - startTime,respo_selec,num_questao);
-        relat.setVisible(true);
+        TelaRelatorio telaRelat = new TelaRelatorio(pontuacao, pont_total,System.nanoTime() - startTime,respo_selec,num_questao, idquiz);
+        telaRelat.setVisible(true);
         this.dispose();
         
     }//GEN-LAST:event_finalizarButtonActionPerformed
